@@ -1,0 +1,13 @@
+.quote {
+    width: auto;
+    height: 200px;
+    background-color: aqua;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* Stacks children vertically */
+    align-items: center;
+    /* Horizontally centers children */
+    justify-content: center;
+    /* Vertically centers children */
+}
