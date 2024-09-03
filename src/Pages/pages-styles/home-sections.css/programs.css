@@ -1,0 +1,54 @@
+/* programs.css */
+
+.programs {
+    background-color: red;
+    padding: 20px;
+    /* Add padding to create space around the content */
+}
+
+.programs h2 {
+    font-size: 2rem;
+    color: white;
+    /* Adjust color as needed */
+}
+
+.programs p {
+    font-size: 1rem;
+    color: white;
+    /* Adjust color as needed */
+}
+
+.programs .program-card {
+    flex: 1 1 30%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.programs .program-card h4 {
+    font-size: 1.25rem;
+    color: white;
+    /* Adjust color as needed */
+}
+
+.programs .program-card p {
+    font-size: 1rem;
+    color: white;
+    /* Adjust color as needed */
+}
+
+.programs .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.programs .contact-button {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-top: 16px;
+    text-align: center;
+}

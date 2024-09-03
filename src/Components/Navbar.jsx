@@ -9,7 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const pages = [
     { name: 'Home', path: '/' },
@@ -30,7 +30,12 @@ function ResponsiveAppBar() {
     };
 
     return (
-        <AppBar position="fixed" sx={{ width: '100%' }}>
+        <AppBar position="fixed"
+            sx={{
+                width: '100%',
+                backgroundColor: 'transparent',
+                boxShadow: 'none'
+            }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Typography
@@ -47,7 +52,7 @@ function ResponsiveAppBar() {
                             textDecoration: 'none',
                         }}
                     >
-                        LOGO
+                        Splash Zone
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -80,9 +85,16 @@ function ResponsiveAppBar() {
                             {pages.map((page) => (
                                 <MenuItem key={page.name} onClick={handleCloseNavMenu}>
                                     <Typography sx={{ textAlign: 'center' }}>
-                                        <Link to={page.path} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                        <NavLink
+                                            to={page.path}
+                                            style={({ isActive }) => ({
+                                                textDecoration: 'none',
+                                                color: 'inherit',
+                                                borderBottom: isActive ? '5px solid black' : 'none',
+                                            })}
+                                        >
                                             {page.name}
-                                        </Link>
+                                        </NavLink>
                                     </Typography>
                                 </MenuItem>
                             ))}
@@ -104,10 +116,9 @@ function ResponsiveAppBar() {
                             textDecoration: 'none',
                         }}
                     >
-                        LOGO
+                        Splash Zone
                     </Typography>
 
-                    {/* Move this Box to the right side */}
                     <Box sx={{ display: { xs: 'none', md: 'flex' }, ml: 'auto' }}>
                         {pages.map((page) => (
                             <Button
@@ -115,9 +126,17 @@ function ResponsiveAppBar() {
                                 onClick={handleCloseNavMenu}
                                 sx={{ my: 2, color: 'white', display: 'block' }}
                             >
-                                <Link to={page.path} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                <NavLink
+                                    to={page.path}
+                                    style={({ isActive }) => ({
+                                        fontWeight: "bold",
+                                        textDecoration: 'none',
+                                        color: 'inherit',
+                                        borderBottom: isActive ? '5px solid black' : 'none',
+                                    })}
+                                >
                                     {page.name}
-                                </Link>
+                                </NavLink>
                             </Button>
                         ))}
                     </Box>

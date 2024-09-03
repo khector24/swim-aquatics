@@ -1,0 +1,9 @@
+.why-us {
+    height: 300;
+    background-color: green;
+}
+
+.why-us,
+h2 {
+    margin-top: 0%;
+}

@@ -1,29 +1,17 @@
 import "./pages-styles/home.css";
-import Quote from "../Components/Quote";
+
+import Main from "./home-page-sections/Main";
+import Quote from "./home-page-sections/Quote";
+import Programs from "./home-page-sections/Programs"
+import WhyUs from "./home-page-sections/WhyUs";
+
 export default function Home() {
     return (
         <>
-            <div>
-                <h1>Welcome to Splash Zone Aquatics</h1>
-                <p class="">We offer indoor and outdoor swimming classes and programs for children, ages 5 months and up. Let your child dive into the world of swimming and discover a lifetime of joy and confidence in the water.</p>
-                <a href="/programs" class="btn btn-primary">Explore Programs</a>
-            </div>
-            <div>
-                <h1>Welcome to Splash Zone Aquatics</h1>
-                <p class="">We offer indoor and outdoor swimming classes and programs for children, ages 5 months and up. Let your child dive into the world of swimming and discover a lifetime of joy and confidence in the water.</p>
-                <a href="/programs" class="btn btn-primary">Explore Programs</a>
-            </div>
-            <div>
-                <h1>Welcome to Splash Zone Aquatics</h1>
-                <p class="">We offer indoor and outdoor swimming classes and programs for children, ages 5 months and up. Let your child dive into the world of swimming and discover a lifetime of joy and confidence in the water.</p>
-                <a href="/programs" class="btn btn-primary">Explore Programs</a>
-            </div>
-            <div>
-                <h1>Welcome to Splash Zone Aquatics</h1>
-                <p class="">We offer indoor and outdoor swimming classes and programs for children, ages 5 months and up. Let your child dive into the world of swimming and discover a lifetime of joy and confidence in the water.</p>
-                <a href="/programs" class="btn btn-primary">Explore Programs</a>
-            </div>
+            <Main />
             <Quote />
+            <Programs />
+            <WhyUs />
         </>
     );
 }

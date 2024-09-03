@@ -1,0 +1,35 @@
+/* Add any necessary styles here */
+
+.py-4 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.list-group {
+    list-style: none;
+    padding: 0;
+}
+
+.list-group-item {
+    padding: 0.75rem 1.25rem;
+    border: 1px solid #dee2e6;
+}
+
+.rounded-circle {
+    border-radius: 50%;
+}

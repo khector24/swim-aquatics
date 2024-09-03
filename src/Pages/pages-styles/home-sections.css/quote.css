@@ -1,0 +1,15 @@
+.quote {
+    width: auto;
+
+    background-color: aqua;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+
+    /* Stacks children vertically */
+    align-items: center;
+    /* Horizontally centers children */
+    justify-content: center;
+    /* Vertically centers children */
+}
