@@ -1,0 +1,27 @@
+.quote-container {
+    padding: 75px 40px 40px;
+    background-color: #4F75FF;
+    display: flex;
+    gap: 12px;
+}
+
+.quote-card {
+    flex: 1;
+}
+
+.text-area {
+    display: flex;
+    flex-direction: column;
+    /* This ensures vertical alignment */
+    justify-content: center;
+    /* Center items vertically */
+    align-items: center;
+    /* Center items horizontally */
+    background-color: yellow;
+    text-align: center;
+}
+
+.quote-title {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}

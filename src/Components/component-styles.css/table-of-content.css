@@ -1,0 +1,46 @@
+h1 {
+    color: #4F75FF;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.table-content {
+    background-color: #4F75FF;
+    width: 100%;
+    height: 265px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.table-content h2,
+a {
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.table-content h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.table-content a {
+    display: inline-block;
+    font-size: 20px;
+    color: #FFD94F;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    border-bottom: 2px solid white;
+    padding-bottom: 2px;
+}
+
+.table-content a:hover {
+    color: white;
+    /* Change text color on hover */
+    border-bottom-color: purple;
+    /* Change underline color on hover */
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Light background on hover */
+}

@@ -15,7 +15,7 @@ const pages = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/About' },
     { name: 'Contact', path: '/Contact' },
-    { name: 'FAQ', path: '/FAQ' }
+    { name: 'FAQ', path: '/FAQ' },
 ];
 
 function ResponsiveAppBar() {
@@ -33,7 +33,7 @@ function ResponsiveAppBar() {
         <AppBar position="fixed"
             sx={{
                 width: '100%',
-                backgroundColor: 'transparent',
+                backgroundColor: '#FFD94F',
                 boxShadow: 'none'
             }}>
             <Container maxWidth="xl">
@@ -52,7 +52,7 @@ function ResponsiveAppBar() {
                             textDecoration: 'none',
                         }}
                     >
-                        Splash Zone
+                        Splash-Zone
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -116,7 +116,7 @@ function ResponsiveAppBar() {
                             textDecoration: 'none',
                         }}
                     >
-                        Splash Zone
+                        Splash-Zone
                     </Typography>
 
                     <Box sx={{ display: { xs: 'none', md: 'flex' }, ml: 'auto' }}>
@@ -124,7 +124,7 @@ function ResponsiveAppBar() {
                             <Button
                                 key={page.name}
                                 onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
+                                sx={{ my: 2, color: '#4F75FF', display: 'block' }}
                             >
                                 <NavLink
                                     to={page.path}

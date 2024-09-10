@@ -1,0 +1,9 @@
+.reviews {
+    margin: 0 40px;
+}
+
+.author {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #f0f0f0;
+}

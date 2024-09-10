@@ -17,17 +17,40 @@ export default function FAQ() {
     }, []);
 
     return (
-        <div>
-            <h1>Frequently Asked Questions</h1>
+        <div className='FAQ-Content'>
+            <div className='FAQ-Heading'>
+                <h1>Frequently Asked Questions</h1>
+                <h4>Reliable Answers to Our Most Popular Questions</h4>
+                <p>
+                    Here at Splash-Zone, we understand that you may have a lot
+                    of questions and we're here to answer all of them. We want
+                    you to trust us to take amazing care of your child and
+                    help them grow socially, emotionally and
+                    intellectually while having a whole lot of fun.
+                    <br />
+                    <br />
+                    We hope that the answers we provide to the following FAQs
+                    offer all of the information you need.
+                    <br />
+                    <br />
+                    <hr />
+                    Have a more specific question about our swim schools and services?
+                    <br />
+                    <br />
+                    Contact a location around your area to learn more about swim training and instruction in a fun and exciting environment. We look forward to seeing you in the pool!
+                </p>
+            </div>
+            <hr />
             <div className="accordion">
                 {faqs.map((faq, index) => (
                     <Accordion key={index} defaultExpanded={index === 0}>
                         <AccordionSummary
+                            sx={{ backgroundColor: "#4F75FF" }}
                             expandIcon={<ExpandMoreIcon />}
                             aria-controls={`panel${index}-content`}
                             id={`panel${index}-header`}
                         >
-                            <Typography>
+                            <Typography sx={{ color: 'white' }}>
                                 Question {index + 1}: {faq.question}
                             </Typography>
                         </AccordionSummary>

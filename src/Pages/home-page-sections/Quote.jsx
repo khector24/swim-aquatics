@@ -15,9 +15,11 @@ export default function QuoteSection() {
 
     return (
         <>
-            <div className="quote">
-                <h2>{`"${randomQuote.quote}"`}</h2>
-                <h4>{`- ${randomQuote.author}`}</h4>
+            <div className="quote" style={{ color: "white" }}>
+                <div>
+                    <h2>{`"${randomQuote.quote}"`}</h2>
+                    <h4 style={{ marginBottom: 40 }}>{`- ${randomQuote.author}`}</h4>
+                </div>
                 <QuoteImage />
             </div>
         </>
