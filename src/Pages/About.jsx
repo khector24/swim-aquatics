@@ -1,4 +1,4 @@
-import { Card, CardContent, Typography, Grid2, Stack } from '@mui/material';
+import { Card, CardContent, Typography, Grid2, Stack, CardMedia } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
 import { NavLink } from 'react-router-dom';
 import './pages-styles/about.css';
@@ -46,8 +46,10 @@ export default function About() {
         <section className="about-us">
             <div className="content">
                 <div className="title">
-                    <h1>About Us</h1>
-                    <p>
+                    <Typography variant="h1" style={{ fontSize: "3rem", marginBottom: "1rem" }}>
+                        About Us
+                    </Typography>
+                    <Typography variant="body1" style={{ fontSize: "1.2rem", marginBottom: "1.5rem" }}>
                         Splash Zone Aquatics is a passionate team
                         dedicated to providing exceptional aquatic swimming
                         classes and programs for children, ages 5 months and up.
@@ -55,20 +57,36 @@ export default function About() {
                         instructor, we are committed to helping your child
                         develop essential life skills and become the best swimmer
                         they can be.
-                    </p>
+                    </Typography>
                 </div>
 
                 <div className="middle-content">
                     <div className="philosophy">
                         <h2 className="mt-4">Our Philosophy</h2>
-                        <p>At Splash Zone Aquatics, our philosophy revolves around creating an inviting and safe space where kids can overcome their fears and embrace the joy of swimming. Our dedicated team of instructors is committed to fostering a love for swimming and empowering children with essential water skills that will stay with them for life.</p>
-
+                        <Typography variant="body1" style={{ fontSize: "1.2rem", lineHeight: "1.8" }}>
+                            At Splash Zone Aquatics, our philosophy revolves around
+                            creating an inviting and safe space where kids can
+                            overcome their fears and embrace the joy of swimming.
+                            Our dedicated team of instructors is committed to
+                            fostering a love for swimming and empowering children with
+                            essential water skills that will stay with them for life.
+                        </Typography>
                     </div>
                     <div className="carousel">
                         <h2>Meet Our Instructors</h2>
-                        <Carousel navButtonsAlwaysVisible indicators={false} autoPlay={false} animation="slide">
+                        <Carousel
+                            navButtonsAlwaysVisible
+                            indicators={false}
+                            autoPlay={false}
+                            animation="slide"
+                        >
                             {instructors.map((instructor, index) => (
-                                <InstructorProfile key={index} name={instructor.name} description={instructor.description} img={instructor.img} />
+                                <InstructorProfile
+                                    key={index}
+                                    name={instructor.name}
+                                    description={instructor.description}
+                                    img={instructor.img}
+                                />
                             ))}
                         </Carousel>
                     </div>
@@ -79,9 +97,9 @@ export default function About() {
                         <h2>What We Offer</h2>
                         <Stack spacing={2}>
                             {whatWeOffer.map((offer, index) => (
-                                <Card key={index}>
+                                <Card className="card" style={{ backgroundColor: "#4F75FF" }} key={index}>
                                     <CardContent>
-                                        <Typography variant="h6">{offer}</Typography>
+                                        <Typography style={{ color: "white" }} variant="h6">{offer}</Typography>
                                     </CardContent>
                                 </Card>
                             ))}
@@ -92,9 +110,9 @@ export default function About() {
                         <h2>What Students Receive</h2>
                         <Stack spacing={2}>
                             {whatStudentsReceive.map((benefit, index) => (
-                                <Card key={index}>
+                                <Card className="card" style={{ backgroundColor: "#4F75FF" }} key={index}>
                                     <CardContent>
-                                        <Typography variant="h6">{benefit}</Typography>
+                                        <Typography style={{ color: "white" }} variant="h6">{benefit}</Typography>
                                     </CardContent>
                                 </Card>
                             ))}
@@ -123,16 +141,51 @@ export default function About() {
 
 function InstructorProfile({ name, description, img }) {
     return (
-        <div className="instructor-profile">
-            <div className="profile-container">
-                <img src={img} alt={`${name} - Swim Instructor`} className="rounded-circle" />
-                <div className="profile-description">
-                    <strong>{name}:</strong> {description}
-                </div>
-            </div>
-        </div>
+        <Card className="instructor-profile" style={{ maxWidth: 400, margin: 'auto' }}>
+            <CardMedia
+                component="img"
+                alt={`${name} - Swim Instructor`}
+                height="300"
+                image={img}
+                style={{ borderRadius: '10px' }}
+            />
+            <CardContent style={{ backgroundColor: '#4F75FF', }}>
+                <Typography
+                    style={{
+                        color: '#FFD94F',
+                        textShadow: '2px 2px 4px rgba(0, 0, 0, 0.7)'
+                    }}
+                    gutterBottom
+                    variant="h5"
+                    component="div">
+                    {name}
+                </Typography>
+                <Typography
+                    style={{
+                        color: 'white',
+                    }}
+                    variant="body2"
+                    color="text.secondary"
+                >
+                    {description}
+                </Typography>
+            </CardContent>
+        </Card >
     );
 }
+
+// function InstructorProfile({ name, description, img }) {
+//     return (
+//         <div className="instructor-profile">
+//             <div className="profile-container">
+//                 <img src={img} alt={`${name} - Swim Instructor`} className="rounded-circle" />
+//                 <div className="profile-description">
+//                     <strong>{name}:</strong> {description}
+//                 </div>
+//             </div>
+//         </div>
+//     );
+// }
 
 
 

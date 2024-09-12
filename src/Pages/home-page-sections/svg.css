@@ -1,0 +1,73 @@
+.section-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 40px 0;
+    background-color: #4f75ff;
+    /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23f0f8ff' fill-opacity='1' d='M0,320L30,309.3C60,299,120,277,180,266.7C240,256,300,256,360,229.3C420,203,480,149,540,133.3C600,117,660,139,720,170.7C780,203,840,245,900,256C960,267,1020,245,1080,213.3C1140,181,1200,139,1260,133.3C1320,128,1380,160,1410,176L1440,192L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z'/%3E%3C/svg%3E"); */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23cfe9ff' fill-opacity='1' d='M0,256L80,261.3C160,267,320,277,480,277.3C640,277,800,267,960,229.3C1120,192,1280,128,1360,96L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z'/%3E%3C/svg%3E");
+    /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23f0f8ff' fill-opacity='1' d='M0,192L80,176C160,160,320,128,480,133.3C640,139,800,181,960,197.3C1120,213,1280,203,1360,197.3L1440,192L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z'/%3E%3C/svg%3E"); */
+    /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23f0f8ff' fill-opacity='1' d='M0,192L80,176C160,160,320,128,480,133.3C640,139,800,181,960,197.3C1120,213,1280,203,1360,197.3L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z'/%3E%3C/svg%3E"); */
+    /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23fefdd2' fill-opacity='1' d='M0,192L80,176C160,160,320,128,480,133.3C640,139,800,181,960,197.3C1120,213,1280,203,1360,197.3L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z'/%3E%3C/svg%3E"); */
+    /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23e1ffc8' fill-opacity='1' d='M0,192L80,176C160,160,320,128,480,133.3C640,139,800,181,960,197.3C1120,213,1280,203,1360,197.3L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z'/%3E%3C/svg%3E"); */
+
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    overflow: visible;
+}
+
+
+.home-card {
+    flex: 1;
+    margin: 0 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: -20px;
+}
+
+/* .home-card img {
+    transition: transform 0.3s ease;
+} */
+
+/* .home-card:hover img {
+    transform: scale(1.05);
+} */
+
+
+
+/* .container {
+    height: 275px;
+    width: 100%;
+    background-color: #4f75ff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23f0f8ff' fill-opacity='1' d='M0,320L30,309.3C60,299,120,277,180,266.7C240,256,300,256,360,229.3C420,203,480,149,540,133.3C600,117,660,139,720,170.7C780,203,840,245,900,256C960,267,1020,245,1080,213.3C1140,181,1200,139,1260,133.3C1320,128,1380,160,1410,176L1440,192L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z'/%3E%3C/svg%3E");
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    padding: 0;
+    margin: 0;
+    border-radius: 0%;
+} */
+
+/* .svg-example {
+    height: 275px;
+    width: 100%;
+    background-color: #4f75ff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23f0f8ff' fill-opacity='1' d='M0,320L30,309.3C60,299,120,277,180,266.7C240,256,300,256,360,229.3C420,203,480,149,540,133.3C600,117,660,139,720,170.7C780,203,840,245,900,256C960,267,1020,245,1080,213.3C1140,181,1200,139,1260,133.3C1320,128,1380,160,1410,176L1440,192L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z'/%3E%3C/svg%3E");
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.svg-example h2 {
+    font-size: 2rem;
+} */

@@ -4,7 +4,7 @@
 }
 
 .about-us {
-    margin: 90px 40px 50px 40px;
+    margin: 90px 60px 0;
     display: flex;
     justify-content: space-between;
 }
@@ -15,9 +15,16 @@
 
 .content {
     padding-right: 15px;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
     flex: 3;
     border-right: 1px solid black;
+    /* max-width: 80%; */
+    /* Increase width */
+    padding: 20px;
+}
+
+.title {
+    margin-bottom: 50px;
 }
 
 .middle-content {
@@ -26,27 +33,34 @@
 }
 
 .philosophy {
-    margin-bottom: 15px;
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: #f0f8ff;
+    border-radius: 10px;
 }
 
 .philosophy h2 {
     margin-bottom: 15px;
 }
 
+.philosophy p {
+    font-size: 1.2rem;
+    /* Larger text */
+}
+
 .carousel {
     flex: 3;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
 }
 
 .carousel h2 {
-    margin-bottom: 15px;
+    margin-bottom: 50px;
 }
 
 .carousel img {
-    height: 350px;
-    width: 350px;
+    height: 450px;
+    width: 450px;
 }
-
 
 
 .offers {
@@ -55,9 +69,24 @@
 
 .students {}
 
+.offers,
+.students {
+    font-size: 1.2rem;
+}
+
 .students h2,
 .offers h2 {
     margin-bottom: 20px;
+}
+
+.card {
+    padding: 20px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    /* Add hover effect */
 }
 
 @media (max-width: 768px) {
@@ -68,8 +97,6 @@
     .content {
         margin-bottom: 50px;
     }
-
-
 
     .offers,
     .students {
