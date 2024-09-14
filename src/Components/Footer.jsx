@@ -17,7 +17,6 @@ export default function Footer() {
                             fontWeight: 'bold',
                             color: '#4F75FF',
                             textTransform: 'uppercase',
-                            marginBottom: '20px'
                         }}
                     >
                         Splash-Zone

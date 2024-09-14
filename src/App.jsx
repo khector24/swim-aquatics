@@ -6,6 +6,7 @@ import Contact from "./Pages/Contact"
 import FAQ from "./Pages/FAQ"
 import Layout from './Layout'
 import Testimonials from './Pages/Testimonials'
+import ContactUs from './Pages/ContactUs'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/About' element={<About />} />
           <Route path='/Contact' element={<Contact />} />
+          <Route path='/ContactUS' element={<ContactUs />} />
           <Route path='/FAQ' element={<FAQ />} />
           <Route path='/Testimonials' element={<Testimonials />} />
         </Route>
