@@ -18,7 +18,7 @@ const pages = [
     { name: 'FAQ', path: '/FAQ' },
 ];
 
-function ResponsiveAppBar() {
+function NavBar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [openContactModal, setOpenContactModal] = React.useState(false);
 
@@ -168,7 +168,7 @@ function ResponsiveAppBar() {
     );
 }
 
-export default ResponsiveAppBar;
+export default NavBar;
 
 
 // import * as React from 'react';
