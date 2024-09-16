@@ -15,7 +15,6 @@ import ContactUsModal from '../Pages/ContactUsModal';
 const pages = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/About' },
-    { name: 'Contact', path: '/Contact' },
     { name: 'FAQ', path: '/FAQ' },
 ];
 
@@ -154,7 +153,7 @@ function ResponsiveAppBar() {
                             ))}
                             <Button
                                 onClick={handleOpenContactModal}
-                                sx={{ my: 2, color: '#4F75FF', display: 'block' }}
+                                sx={{ my: 2, color: '#4F75FF', display: 'block', fontWeight: "bold", }}
                             >
                                 Contact Us
                             </Button>

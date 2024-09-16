@@ -40,7 +40,7 @@ export default function FAQ() {
                     <Typography className="question" variant="body1" component="p" gutterBottom>
                         Have a more specific question?
                         <br />
-                        <CustomButton to={"/contact"} label={"Contact Us"} />
+                        <CustomButton to={"/ContactUs"} label={"Contact Us"} />
                     </Typography>
                 </div>
 
