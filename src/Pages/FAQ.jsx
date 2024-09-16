@@ -6,11 +6,16 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import CustomButton from '../Components/CustomButton';
 import "../Pages/pages-styles/faq.css";
+import { useOutletContext } from 'react-router-dom';
+
 
 // Import the JSON data
 import faqData from '../assets/faqs.json';
 
 export default function FAQ() {
+    const { onContactClick } = useOutletContext();
+
+
     const [faqs, setFaqs] = useState([]);
 
     useEffect(() => {
@@ -40,7 +45,7 @@ export default function FAQ() {
                     <Typography className="question" variant="body1" component="p" gutterBottom>
                         Have a more specific question?
                         <br />
-                        <CustomButton to={"/ContactUs"} label={"Contact Us"} />
+                        <CustomButton onClick={onContactClick} label={"Contact Us!"} />
                     </Typography>
                 </div>
 

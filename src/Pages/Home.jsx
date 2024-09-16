@@ -1,5 +1,7 @@
 // import "../Pages/pages-styles/home-sections.css/home-display-cards.css"
 
+import { useOutletContext } from 'react-router-dom';
+
 import Main from "./home-page-sections/Main";
 import Quote from "./home-page-sections/Quote";
 import Programs from "./home-page-sections/Programs"

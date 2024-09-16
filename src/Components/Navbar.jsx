@@ -18,9 +18,9 @@ const pages = [
     { name: 'FAQ', path: '/FAQ' },
 ];
 
-function NavBar() {
+function NavBar({ onContactClick }) {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
-    const [openContactModal, setOpenContactModal] = React.useState(false);
+    // const [openContactModal, setOpenContactModal] = React.useState(false);
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -30,14 +30,14 @@ function NavBar() {
         setAnchorElNav(null);
     };
 
-    const handleOpenContactModal = () => {
-        setOpenContactModal(true);
-        handleCloseNavMenu(); // Close the menu if it's open
-    };
+    // const handleOpenContactModal = () => {
+    //     setOpenContactModal(true);
+    //     handleCloseNavMenu(); // Close the menu if it's open
+    // };
 
-    const handleCloseContactModal = () => {
-        setOpenContactModal(false);
-    };
+    // const handleCloseContactModal = () => {
+    //     setOpenContactModal(false);
+    // };
 
     return (
         <>
@@ -109,7 +109,7 @@ function NavBar() {
                                         </Typography>
                                     </MenuItem>
                                 ))}
-                                <MenuItem onClick={handleOpenContactModal}>Contact Us</MenuItem>
+                                {/* <MenuItem onClick={onContactClick}>Contact Us</MenuItem> */}
                             </Menu>
                         </Box>
 
@@ -152,7 +152,7 @@ function NavBar() {
                                 </Button>
                             ))}
                             <Button
-                                onClick={handleOpenContactModal}
+                                onClick={onContactClick}
                                 sx={{ my: 2, color: '#4F75FF', display: 'block', fontWeight: "bold", }}
                             >
                                 Contact Us
@@ -163,7 +163,13 @@ function NavBar() {
             </AppBar>
 
             {/* Modal for Contact Us */}
-            <ContactUsModal open={openContactModal} handleClose={handleCloseContactModal} />
+            {/* <ContactUsModal open={openContactModal} handleClose={handleCloseContactModal} /> */}
+            {/* <Button
+                onClick={onContactClick}
+                sx={{ my: 2, color: '#4F75FF', display: 'block', fontWeight: "bold", }}
+            >
+                Contact Us
+            </Button> */}
         </>
     );
 }

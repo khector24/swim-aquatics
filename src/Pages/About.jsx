@@ -4,6 +4,7 @@ import './pages-styles/about.css';
 import NavigationDiv from '../Components/NavigationDiv';
 import TableOfContent from '../Components/TableOfContent';
 import InstructorProfile from '../Components/InstructorProfile';
+import { useOutletContext } from 'react-router-dom';
 
 
 const instructors = [
@@ -42,6 +43,8 @@ const whatStudentsReceive = [
     "A Safe Environment At All Times",
 ];
 export default function About() {
+    const { onContactClick } = useOutletContext();
+
     return (
         <section className="about-us">
             <div className="content">

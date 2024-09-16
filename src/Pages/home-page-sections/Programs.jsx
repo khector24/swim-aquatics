@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import CustomButton from '../../Components/CustomButton';
 import "../pages-styles/home-sections.css/programs.css";
+import { useOutletContext } from 'react-router-dom';
 
 const programsData = [
     {
@@ -19,6 +20,8 @@ const programsData = [
 ];
 
 export default function Programs() {
+    const { onContactClick } = useOutletContext();
+
     return (
         <Box className="programs">
             <Typography className="title" variant="h2" component="h2" gutterBottom>
@@ -39,7 +42,7 @@ export default function Programs() {
                     </Box>
                 ))}
             </Box>
-            <CustomButton to="/contact" label="Contact Us" className="contact-button" />
+            <CustomButton onClick={onContactClick} label="Contact Us" className="contact-button" />
         </Box>
     );
 }

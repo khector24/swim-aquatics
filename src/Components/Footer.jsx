@@ -4,7 +4,7 @@ import ContactButton from './ContactButton';
 
 import { Typography } from '@mui/material';
 
-export default function Footer() {
+export default function Footer({ onContactClick }) {
     const currentYear = new Date().getFullYear();
     return (
         <div className="footer">
@@ -23,7 +23,7 @@ export default function Footer() {
                         <br />
                         <span>Aquatics</span>
                     </Typography>
-                    <ContactButton />
+                    <button onClick={onContactClick} className="contact-button">Contact Us</button>
                 </div>
 
                 <div className="footer-social">
