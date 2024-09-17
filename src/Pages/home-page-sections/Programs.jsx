@@ -23,7 +23,7 @@ export default function Programs() {
     const { onContactClick } = useOutletContext();
 
     return (
-        <Box className="programs">
+        <Box id="programs-section" className="programs">
             <Typography className="title" variant="h2" component="h2" gutterBottom>
                 Our Programs
             </Typography>

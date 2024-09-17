@@ -63,7 +63,7 @@ function NavBar({ onContactClick }) {
                                 textDecoration: 'none',
                             }}
                         >
-                            Splash-Zone
+                            SPLASH-ZONE
                         </Typography>
 
                         <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -128,7 +128,7 @@ function NavBar({ onContactClick }) {
                                 textDecoration: 'none',
                             }}
                         >
-                            Splash-Zone
+                            SPLASH-ZONE
                         </Typography>
 
                         <Box sx={{ display: { xs: 'none', md: 'flex' }, ml: 'auto' }}>
