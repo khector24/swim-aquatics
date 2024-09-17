@@ -2,7 +2,14 @@ import { NavLink } from 'react-router-dom';
 import { Card, CardMedia, CardContent, Button } from '@mui/material';
 import "../Components/component-styles.css/navigation-div.css";
 
-export default function NavigationDiv({ to, label, img }) {
+export default function NavigationDiv({ to, label, img, onClick }) {
+    const handleClick = (event) => {
+        if (onClick) {
+            event.preventDefault(); // Prevent navigation if onClick is provided
+            onClick(); // Call the provided function
+        }
+    };
+
     return (
         <Card sx={{
             position: 'relative',
@@ -22,6 +29,7 @@ export default function NavigationDiv({ to, label, img }) {
                     component={NavLink}
                     to={to}
                     className="button-link"
+                    onClick={handleClick}
                 >
                     {label}
                 </Button>
@@ -29,6 +37,40 @@ export default function NavigationDiv({ to, label, img }) {
         </Card>
     );
 }
+
+
+
+// import { NavLink } from 'react-router-dom';
+// import { Card, CardMedia, CardContent, Button } from '@mui/material';
+// import "../Components/component-styles.css/navigation-div.css";
+
+// export default function NavigationDiv({ to, label, img }) {
+//     return (
+//         <Card sx={{
+//             position: 'relative',
+//             borderRadius: '10px',
+//             overflow: 'hidden',
+//             height: 160,
+//             marginBottom: 2
+//         }}>
+//             <CardMedia
+//                 component="img"
+//                 image={img}
+//                 alt={label}
+//                 className="card-media"
+//             />
+//             <CardContent className="card-content">
+//                 <Button
+//                     component={NavLink}
+//                     to={to}
+//                     className="button-link"
+//                 >
+//                     {label}
+//                 </Button>
+//             </CardContent>
+//         </Card>
+//     );
+// }
 
 
 // import { NavLink } from 'react-router-dom';

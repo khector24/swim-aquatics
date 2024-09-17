@@ -130,11 +130,13 @@ export default function About() {
                         to="/faq"
                         label={"Any Questions?"}
                         img="/src/assets/images/father-son.webp"
+                    // onClick={onContactClick} // Pass the function here
                     />
                     <NavigationDiv
-                        to="/contact"
+                        // to="/contact"
                         label={"Contact Us!"}
                         img="/src/assets/images/kid-mother.avif"
+                        onClick={onContactClick} // Pass the function here
                     />
                 </div>
             </div>
