@@ -30,6 +30,9 @@ export default function Main() {
                         Explore Programs
                     </Link>
                 </Button>
+                <Button smooth={true} duration={500} style={{ color: 'white', textDecoration: 'none', }}>
+                    Newsletter
+                </Button>
             </div>
         </section>
     );

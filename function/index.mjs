@@ -1,5 +1,5 @@
 import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
-import { PutCommand, DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
+import { PutCommand, GetCommand, DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
 
 // Create the DynamoDB client and DocumentClient
 const client = new DynamoDBClient({});
@@ -43,8 +43,25 @@ export const handler = async (event) => {
             };
         }
 
+        // Check if the email already exists in the table
+        const getParams = {
+            TableName: "SZA_Email_Table",
+            Key: {
+                email: email,
+            },
+        };
+
+        const existingItem = await dynamoDB.send(new GetCommand(getParams));
+
+        if (existingItem.Item) {
+            return {
+                statusCode: 400,
+                body: JSON.stringify({ message: "This email is already subscribed!" }),
+            };
+        }
+
         // Define the DynamoDB put operation
-        const params = {
+        const putParams = {
             TableName: "SZA_Email_Table", // Replace with your table name
             Item: {
                 email: email,
@@ -55,7 +72,7 @@ export const handler = async (event) => {
         };
 
         // Execute the DynamoDB operation
-        await dynamoDB.send(new PutCommand(params));
+        await dynamoDB.send(new PutCommand(putParams));
 
         // Return success response
         return {

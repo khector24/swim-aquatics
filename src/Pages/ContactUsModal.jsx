@@ -5,7 +5,7 @@ import CustomButton from "../components/CustomButton";
 import CloseIcon from '@mui/icons-material/Close';
 
 function ContactUsModal({ open, handleClose }) {
-    const email = "goya69@gmail.com";
+    const email = "splashzoneaquatics@gmail.com";
 
     return (
         <Modal open={open} onClose={handleClose}>
