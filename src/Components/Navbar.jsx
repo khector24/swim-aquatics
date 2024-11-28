@@ -18,7 +18,7 @@ const pages = [
     { name: 'FAQ', path: '/FAQ' },
 ];
 
-function NavBar({ onContactClick }) {
+function NavBar({ onContactClick, onNewsletterClick }) {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     // const [openContactModal, setOpenContactModal] = React.useState(false);
 
@@ -157,6 +157,13 @@ function NavBar({ onContactClick }) {
                             >
                                 Contact Us
                             </Button>
+                            <Button
+                                onClick={onNewsletterClick}  // Add this click handler
+                                sx={{ my: 2, color: '#4F75FF', display: 'block', fontWeight: "bold" }}
+                            >
+                                Newsletter
+                            </Button>
+
                         </Box>
                     </Toolbar>
                 </Container>
