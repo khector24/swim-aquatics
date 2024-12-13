@@ -68,6 +68,7 @@ export const handler = async (event) => {
                 subscribedAt: new Date().toISOString(), // Add timestamp
                 firstName: firstName,
                 lastName: lastName,
+                isSubscribed: true,
             },
         };
 
