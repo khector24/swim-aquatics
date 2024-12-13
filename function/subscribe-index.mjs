@@ -46,36 +46,54 @@ export const handler = async (event) => {
         // Check if the email already exists in the table
         const getParams = {
             TableName: "SZA_Email_Table",
-            Key: {
-                email: email,
-            },
+            Key: { email: email },
         };
 
         const existingItem = await dynamoDB.send(new GetCommand(getParams));
 
         if (existingItem.Item) {
-            return {
-                statusCode: 400,
-                body: JSON.stringify({ message: "This email is already subscribed!" }),
-            };
+            if (existingItem.Item.isSubscribed) {
+                // If the email exists and isSubscribed is true, return an error
+                return {
+                    statusCode: 400,
+                    body: JSON.stringify({ message: "This email is already subscribed!" }),
+                };
+            } else {
+                // If the email exists but isSubscribed is false, overwrite the entire item
+                const putParams = {
+                    TableName: "SZA_Email_Table",
+                    Item: {
+                        email: email,
+                        subscribedAt: new Date().toISOString(),
+                        firstName: existingItem.Item.firstName,
+                        lastName: existingItem.Item.lastName,
+                        isSubscribed: true,
+                    },
+                };
+
+                await dynamoDB.send(new PutCommand(putParams));
+
+                return {
+                    statusCode: 200,
+                    body: JSON.stringify({ message: "Successfully re-subscribed to the newsletter!" }),
+                };
+            }
         }
 
-        // Define the DynamoDB put operation
+        // If the email doesn't exist, add a new record
         const putParams = {
-            TableName: "SZA_Email_Table", // Replace with your table name
+            TableName: "SZA_Email_Table",
             Item: {
                 email: email,
-                subscribedAt: new Date().toISOString(), // Add timestamp
+                subscribedAt: new Date().toISOString(),
                 firstName: firstName,
                 lastName: lastName,
                 isSubscribed: true,
             },
         };
 
-        // Execute the DynamoDB operation
         await dynamoDB.send(new PutCommand(putParams));
 
-        // Return success response
         return {
             statusCode: 200,
             body: JSON.stringify({ message: "Successfully subscribed to the newsletter!" }),
@@ -83,7 +101,6 @@ export const handler = async (event) => {
     } catch (error) {
         console.error("Error handling request:", error);
 
-        // Return internal server error response
         return {
             statusCode: 500,
             body: JSON.stringify({ message: "Internal server error" }),
