@@ -18,6 +18,7 @@ function App() {
           <Route path='/ContactUS' element={<ContactUs />} />
           <Route path='/FAQ' element={<FAQ />} />
           <Route path='/Testimonials' element={<Testimonials />} />
+          <Route path="/unsubscribe" element={<UnsubscribePage />} />
         </Route>
       </Routes>
     </Router>
