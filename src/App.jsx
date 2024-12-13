@@ -1,5 +1,5 @@
 import './App.css'
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from "./Pages/Home"
 import About from "./Pages/About"
 import Contact from "./Pages/Contact"
@@ -7,6 +7,7 @@ import FAQ from "./Pages/FAQ"
 import Layout from './Layout'
 import Testimonials from './Pages/Testimonials'
 import ContactUs from './Pages/ContactUs'
+import UnsubscribePage from './Pages/UnsubscribePage'
 
 function App() {
   return (

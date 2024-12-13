@@ -1,10 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Box, Typography, TextField, Button, Alert } from '@mui/material';
+import { useLocation } from 'react-router-dom';
 
 function UnsubscribePage() {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [loading, setLoading] = useState(false);
+
+    const location = useLocation();
+
+    // Extract email from the URL query parameter
+    useEffect(() => {
+        const queryParams = new URLSearchParams(location.search);
+        const emailFromUrl = queryParams.get('email');
+        if (emailFromUrl) {
+            setEmail(emailFromUrl);
+        }
+    }, [location.search]);
 
     const handleSubmit = async () => {
         setLoading(true);
@@ -40,16 +52,16 @@ function UnsubscribePage() {
                 Unsubscribe from Our Newsletter
             </Typography>
             <Typography variant="body1" sx={{ mb: 3 }}>
-                To stop receiving newsletters from us, please enter your email below:
+                To stop receiving newsletters from us, please click the button below:
             </Typography>
 
             <TextField
                 fullWidth
-                label="Enter your email"
+                label="Email"
                 variant="outlined"
                 sx={{ mb: 3 }}
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                disabled
             />
 
             <Button
