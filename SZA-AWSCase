@@ -1,0 +1,73 @@
+Dear AWS Support Team,
+
+I am requesting to move my Amazon SES account to production mode. Below are the details of my use case:
+
+Purpose of Emails:
+
+My application manages subscriptions for a swimming organization called Splash Zone Aquatics. It sends welcome and unsubscribe confirmation emails based on user actions in DynamoDB.
+Email Types:
+
+Transactional emails (welcome and unsubscribe notifications).
+Sending Practices:
+
+Emails include clear sender identification (kennyhector24@gmail.com).
+A functional unsubscribe link is added to every email.
+Example link: https://yourdomain.com/unsubscribe?email={user_email}.
+Code Overview:
+
+Emails are triggered by DynamoDB Stream events for new subscriptions and status changes.
+Code uses AWS SDK for DynamoDB and SES to manage subscription status and send emails.
+Comprehensive validation ensures only valid data is processed.
+Volume:
+
+Initial expected volume is ~100 emails/day, scaling up based on user engagement.
+Compliance:
+
+Anti-spam best practices are followed, including immediate processing of unsubscribe requests and monitoring bounce rates.
+Domain Verification:
+
+Domain for sending emails is verified, and DKIM/SPF records are properly configured.
+Attachments:
+If needed, I can provide sample email content and code snippets for review.
+
+Please let me know if any additional information is required. I appreciate your assistance in enabling production access for Amazon SES.
+
+Best regards,
+Kenny Hector
+kennyhector24@gmail.com
++1-845-659-6405
+
+Dear AWS Support Team,
+
+Thank you for reviewing my request for Amazon SES production access. Below are the details you requested regarding my email-sending use case:
+
+Mail Type:
+
+Transactional emails for newsletter subscriptions on my website.
+Website URL:
+
+https://www.splashzoneaquatics.com.
+Email-Sending Practices:
+
+Emails will be sent to users who explicitly opt in by subscribing to our newsletter on the website.
+
+Unsubscribe Requests:
+
+All emails will include a clear and functional "unsubscribe" link to allow recipients to opt out.
+Unsubscribe requests will be processed immediately to ensure compliance with anti-spam regulations.
+Email Content:
+
+Emails will consist of high-quality, relevant content such as welcome messages, subscription confirmations, and newsletters. Example:
+
+vbnet
+Copy code
+Subject: Welcome to Splash Zone Aquatics Newsletter!  
+Hi [Recipient Name],  
+Thank you for subscribing to our newsletter! Stay tuned for updates, tips, and insights from splashzoneaquatics.com.  
+
+If you no longer wish to receive these emails, click here to unsubscribe.  
+Please let me know if you need further details or clarifications. I look forward to your approval so I can proceed with production email sending.
+
+Thank you,
+Team at Splash Zone Aquatics
+
