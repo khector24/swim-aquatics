@@ -11,6 +11,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { NavLink } from "react-router-dom";
 import ContactUsModal from '../Pages/ContactUsModal';
+import './component-styles.css/navbar.css';
 
 const pages = [
     { name: 'Home', path: '/' },
@@ -134,9 +135,15 @@ function NavBar({ onContactClick, onNewsletterClick }) {
                         <Box sx={{ display: { xs: 'none', md: 'flex' }, ml: 'auto' }}>
                             {pages.map((page) => (
                                 <Button
+                                    className='nav-button'
                                     key={page.name}
                                     onClick={handleCloseNavMenu}
-                                    sx={{ my: 2, color: '#4F75FF', display: 'block' }}
+                                    sx={{
+                                        my: 2,
+                                        color: '#4F75FF',
+                                        display: 'block',
+                                        '&:hover': { backgroundColor: 'transparent' }
+                                    }}
                                 >
                                     <NavLink
                                         to={page.path}
@@ -146,18 +153,21 @@ function NavBar({ onContactClick, onNewsletterClick }) {
                                             color: 'inherit',
                                             borderBottom: isActive ? '5px solid #4F75FF' : 'none',
                                         })}
+                                        className="nav-link"
                                     >
                                         {page.name}
                                     </NavLink>
                                 </Button>
                             ))}
                             <Button
+                                className='nav-button'
                                 onClick={onContactClick}
                                 sx={{ my: 2, color: '#4F75FF', display: 'block', fontWeight: "bold", }}
                             >
                                 Contact Us
                             </Button>
                             <Button
+                                className='nav-button'
                                 onClick={onNewsletterClick}  // Add this click handler
                                 sx={{ my: 2, color: '#4F75FF', display: 'block', fontWeight: "bold" }}
                             >
