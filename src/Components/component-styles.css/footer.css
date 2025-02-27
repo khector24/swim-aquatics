@@ -81,6 +81,8 @@
 .footer p {
     margin-top: 20px;
     font-size: 14px;
+    text-shadow: none;
+    color: #000;
 }
 
 /* Responsive Design */

@@ -52,14 +52,14 @@
 
 .programs .contact-button {
     margin-top: 40px;
-    background-color: #FFD94F;
-    color: #4F75FF;
+    background-color: #fff;
+    color: #000;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .programs .contact-button:hover {
     margin-top: 40px;
-    background-color: #FFF;
+    background-color: #f0f8ff;
     color: #4F75FF;
 }
 
