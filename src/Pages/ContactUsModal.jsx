@@ -38,7 +38,7 @@ function ContactUsModal({ open, handleClose }) {
                     <Typography variant="h5" component="h3" gutterBottom>Our Contact Information</Typography>
                     <Typography variant="body1" gutterBottom><strong>Phone:</strong> (845) 825-7038</Typography>
                     <Typography variant="body1" gutterBottom><strong>Email:</strong> {email}</Typography>
-                    <CustomButton to={`mailto:${email}`} label="Email Us" className="email-button" />
+                    <CustomButton to={`mailto:${email}`} label="Email Us" className="email-button" style={{ backgroundColor: "#f0f8ff" }} />
                 </Box>
                 <Box mt={2}>
                     <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">

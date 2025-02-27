@@ -7,15 +7,21 @@ import { useOutletContext } from 'react-router-dom';
 const programsData = [
     {
         title: "Water Safety",
-        description: "Designed for children aged 6 months to 3 years, this program focuses on foundational skills like breath control, back floating, and learning to push off the wall. It prepares young swimmers for independent participation in water activities."
+        description: "Designed for children aged 6 months to 3 years, this program focuses on foundational skills like breath control, back floating, and learning to push off the wall. It prepares young swimmers for independent participation in water activities.",
+        icon: "https://s3.us-east-1.amazonaws.com/splashzoneaquatics.com/assets/icons/water-safety.png",
+        attributiion: <a href="https://www.flaticon.com/free-icons/life-guard" title="life guard icons">Life guard icons created by Freepik - Flaticon</a>
     },
     {
         title: "Beginner Swim",
-        description: "For children aged 3 to 5 years, this program emphasizes developing basic swimming skills such as balance and kicking. Lessons are delivered through fun games, songs, and engaging stories to make learning enjoyable and effective."
+        description: "For children aged 3 to 5 years, this program emphasizes developing basic swimming skills such as balance and kicking. Lessons are delivered through fun games, songs, and engaging stories to make learning enjoyable and effective.",
+        icon: "https://s3.us-east-1.amazonaws.com/splashzoneaquatics.com/assets/icons/beginner-swim.png",
+        attributiion: <a href="https://www.flaticon.com/free-icons/swimming" title="swimming icons">Swimming icons created by Freepik - Flaticon</a>
     },
     {
         title: "Advanced Swim",
-        description: "Targeted at children aged 6 and up, this program is divided into two levels: Bold Blue and Big Blue. It focuses on advanced stroke techniques, water safety, and building swimming proficiency. Swimmers progress based on their development and skill enhancement."
+        description: "Targeted at children aged 6 and up. This program will focus on developing advanced stroke techniques, water safety, and building swimming proficiency. Swimmers progress based on their development and skill enhancement.",
+        icon: "https://s3.us-east-1.amazonaws.com/splashzoneaquatics.com/assets/icons/advanced-swim.png",
+        attributiion: <a href="https://www.flaticon.com/free-icons/swimming" title="swimming icons">Swimming icons created by Chattapat - Flaticon</a>
     }
 ];
 
@@ -39,6 +45,7 @@ export default function Programs() {
                         <Typography className="program-card-description" variant="body2" component="p">
                             {program.description}
                         </Typography>
+                        <img src={program.icon} alt={program.title} className="program-icon" />
                     </Box>
                 ))}
             </Box>

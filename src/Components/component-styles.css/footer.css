@@ -1,5 +1,5 @@
 .footer {
-    background-color: #FFD94F;
+    background-color: #f0f8ff;
     color: #4F75FF;
     text-align: center;
     /* padding: 50px; */
@@ -78,7 +78,7 @@
     margin: 0 15px;
 }
 
-p {
+.footer p {
     margin-top: 20px;
     font-size: 14px;
 }

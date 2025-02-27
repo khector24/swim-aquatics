@@ -44,7 +44,7 @@ function NavBar({ onContactClick, onNewsletterClick }) {
             <AppBar position="static"
                 sx={{
                     width: '100%',
-                    backgroundColor: '#FFD94F',
+                    backgroundColor: '#f0f8ff',
                     boxShadow: 'none'
                 }}>
                 <Container maxWidth="xl">
@@ -144,7 +144,7 @@ function NavBar({ onContactClick, onNewsletterClick }) {
                                             fontWeight: "bold",
                                             textDecoration: 'none',
                                             color: 'inherit',
-                                            borderBottom: isActive ? '5px solid white' : 'none',
+                                            borderBottom: isActive ? '5px solid #4F75FF' : 'none',
                                         })}
                                     >
                                         {page.name}

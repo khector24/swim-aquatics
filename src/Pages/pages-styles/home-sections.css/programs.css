@@ -17,7 +17,7 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
     margin-top: 20px;
 }
 
@@ -30,10 +30,24 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.programs .program-card h4 {
+    padding-bottom: 12px;
+}
+
 .program-card-description {
     padding: 20px;
-    background-color: #fefdd2;
+    /* background-color: #fefdd2; */
+    background-color: #f0f8ff;
     border-radius: 10px;
+}
+
+.program-icon {
+    width: 50px;
+    /* Adjust size as needed */
+    height: 50px;
+    display: block;
+    margin: 10px auto;
+    /* Centers the icon */
 }
 
 .programs .contact-button {

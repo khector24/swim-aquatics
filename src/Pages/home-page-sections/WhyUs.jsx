@@ -6,11 +6,15 @@ import "../pages-styles/home-sections.css/why-us.css";
 const cardData = [
     {
         title: "Professional Swim Instructors",
-        description: "Our experienced instructors go through extensive training to provide the expertise and consistency your child needs to thrive in the water."
+        description: "Our experienced instructors go through extensive training to provide the expertise and consistency your child needs to thrive in the water.",
+        icon: "https://s3.us-east-1.amazonaws.com/splashzoneaquatics.com/assets/icons/whistle.png",
+        attribution: <a href="https://www.flaticon.com/free-icons/whistle" title="whistle icons">Whistle icons created by Nikita Golubev - Flaticon</a>
     },
     {
         title: "Time-Saving Flexibility",
-        description: "Schedule swim lessons for all your children at the same time, no matter their age or skill level, for ultimate convenience."
+        description: "Schedule swim lessons for all your children at the same time, no matter their age or skill level, for ultimate convenience.",
+        icon: "https://s3.us-east-1.amazonaws.com/splashzoneaquatics.com/assets/icons/save-time.png",
+        attribution: <a href="https://www.flaticon.com/free-icons/save-time" title="save time icons">Save time icons created by Freepik - Flaticon</a>
     }
 ];
 
@@ -37,6 +41,7 @@ export default function WhyUs() {
                     <Paper key={index} className="why-us-card" elevation={3} sx={{ padding: '20px', margin: '10px', flex: '1 1 30%' }}>
                         <Typography className="heading" variant="h5" component="h3" gutterBottom>
                             {card.title}
+                            <img src={card.icon} alt={card.title} className="card-icon" />
                         </Typography>
                         <Typography variant="body2">
                             {card.description}

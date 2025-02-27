@@ -4,17 +4,17 @@ import { Box, Typography, Card, CardActionArea, CardMedia } from '@mui/material'
 const images = [
     {
         label: 'Have Fun and Play',
-        image: '/src/assets/images/quote-images/girl.jpg',
+        image: 'https://s3.us-east-1.amazonaws.com/splashzoneaquatics.com/assets/quote-images/girl.jpg',
         alt: 'Kids playing and having fun',
     },
     {
         label: 'Stay Fit',
-        image: '/src/assets/images/kid-exercising.avif',
+        image: 'https://s3.us-east-1.amazonaws.com/splashzoneaquatics.com/assets/images/kid-exercising.avif',
         alt: 'Kid exercising and staying fit',
     },
     {
         label: 'Learn Water Safety',
-        image: '/src/assets/images/teach-swimming.jpg',
+        image: 'https://s3.us-east-1.amazonaws.com/splashzoneaquatics.com/assets/images/teach-swimming.jpg',
         alt: 'Child learning water safety',
     }
 ];
@@ -53,7 +53,7 @@ export default function HomeDisplayCards() {
                                 variant="h6"
                                 component="div"
                                 sx={{
-                                    color: '#FFD94F',
+                                    color: '#FFF',
                                     textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
                                     textDecoration: 'underline',
                                     textUnderlineOffset: '4px',
