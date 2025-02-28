@@ -5,6 +5,12 @@ import NavigationDiv from '../Components/NavigationDiv';
 import TableOfContent from '../Components/TableOfContent';
 import InstructorProfile from '../Components/InstructorProfile';
 import { useOutletContext } from 'react-router-dom';
+import Box from '@mui/material/Box';
+import CardMedia from '@mui/material/CardMedia';
+import IconButton from '@mui/material/IconButton';
+import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import SkipNextIcon from '@mui/icons-material/SkipNext';
 
 
 const instructors = [
@@ -75,9 +81,9 @@ export default function About() {
                             essential water skills that will stay with them for life.
                         </Typography>
                     </div>
-                    <div className="carousel">
-                        <h2>Meet Our Instructors</h2>
-                        <Carousel
+                    <div className="leader-section">
+                        <h2>Meet Our Leader</h2>
+                        {/* <Carousel
                             navButtonsAlwaysVisible
                             indicators={false}
                             autoPlay={false}
@@ -91,7 +97,46 @@ export default function About() {
                                     img={instructor.img}
                                 />
                             ))}
-                        </Carousel>
+                        </Carousel> */}
+                        <Card
+                            className='leader-card'
+                            sx={{ display: 'flex', alignItems: 'center' }}>
+                            <CardMedia
+                                component="img"
+                                sx={{ width: 300, height: 300, objectFit: 'cover', borderRadius: '8px' }}
+                                image="/src/assets/images/instructorImages/Ethan.jpg"
+                                alt="Ethan"
+                            />
+                            <Box
+                                sx={{
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    flexGrow: 1
+                                }}
+                            >
+                                <CardContent
+                                    sx={{ flex: '1 0 auto' }}
+                                >
+                                    <Typography
+                                        className='leader-card-name'
+                                        component="div" variant="h5"
+                                    >
+                                        Ethan Goya
+                                    </Typography>
+                                    <Typography
+                                        sx={{ color: 'text.secondary' }}
+                                        variant="subtitle1"
+                                        component="div"
+                                        className='leader-card-description'
+                                    >
+                                        As the owner and operator, Ethan is not only an expert swimmer but also a friendly and patient instructor.
+                                        With years of experience, he has a deep passion for teaching kids to swim and fostering a love for the water.
+                                        He also mentors fellow instructors, ensuring a structured and engaging learning environment where children thrive with confidence.
+                                    </Typography>
+                                </CardContent>
+                            </Box>
+                        </Card>
+
                     </div>
                 </div>
 
