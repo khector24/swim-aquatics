@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+}
+
+.container-modal {
+    min-width: 800px;
+}
+
+.container {
+    margin: 0;
+}
+
+.container h1 {
+    font-size: 32px;
+}
+
+.container p,
+h4 {
+    margin: 0;
+    margin-bottom: 0;
+}
+
+.container h4 {
+    font-size: 22px;
+    margin-top: 0;
+}
+
+.email-button {
+    margin: 20px 0 0;
+    background-color: #4F75FF;
+    border: 1px solid black;
+    color: #fff;
+    transition: none;
+    border-radius: 2px solid black;
+}
+
+.container-modal .email-button:hover {
+    background-color: #dfe8ff;
+    transform: none;
+}
+
+.container-modal .social-container {
+    margin: 0;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-icon {
+    color: #4F75FF;
+    padding: 10px;
+}
+
+.social-icon:hover {
+    color: #dfe8ff;
+}
