@@ -25,7 +25,7 @@ h1 {
 .table-content a {
     display: inline-block;
     font-size: 20px;
-    color: #FFD94F;
+    color: #FFF;
     text-decoration: none;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
     transition: all 0.3s ease;
@@ -34,15 +34,9 @@ h1 {
     margin-top: 10px;
     margin-left: 15px;
     cursor: pointer;
-    /* Add this line */
-
 }
 
 .table-content a:hover {
     color: white;
-    /* Change text color on hover */
-    border-bottom-color: purple;
-    /* Change underline color on hover */
     background-color: rgba(255, 255, 255, 0.2);
-    /* Light background on hover */
 }
