@@ -8,7 +8,7 @@ import Programs from "./home-page-sections/Programs"
 import WhyUs from "./home-page-sections/WhyUs";
 import UnderQuote from "./home-page-sections/UnderQuote";
 import QuoteImage from "../Components/QuoteImage";
-import HomeCardSection from "./home-page-sections/HomeCardSection";
+// import HomeCardSection from "./home-page-sections/HomeCardSection";
 
 import SVGExample from "./home-page-sections/SVGExample";
 

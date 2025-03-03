@@ -19,3 +19,11 @@
     position: relative;
     margin-bottom: -20px;
 }
+
+.MuiCardActionArea-root {
+    cursor: default !important;
+}
+
+.MuiCardActionArea-root:hover {
+    transform: none !important;
+}
