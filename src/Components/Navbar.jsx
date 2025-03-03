@@ -19,6 +19,8 @@ const pages = [
     { name: 'FAQ', path: '/FAQ' },
 ];
 
+const waveURL = "https://s3.us-east-1.amazonaws.com/splashzoneaquatics.com/splash-zone-images/wave.png";
+
 function NavBar({ onContactClick, onNewsletterClick }) {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     // const [openContactModal, setOpenContactModal] = React.useState(false);
@@ -64,7 +66,25 @@ function NavBar({ onContactClick, onNewsletterClick }) {
                                 textDecoration: 'none',
                             }}
                         >
-                            SPLASH-ZONE
+                            <Typography
+                                variant="h6"
+                                noWrap
+                                component="div"
+                                sx={{
+                                    display: { xs: 'none', md: 'flex' },
+                                    fontFamily: 'monospace',
+                                    fontWeight: 700,
+                                    letterSpacing: '.1rem',
+                                    color: '#4F75FF',
+                                    textDecoration: 'none',
+                                }}
+                            >
+                                <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                                    <img className="wave-icon" src={waveURL} alt="Wave icon" />
+                                    SPLASH-ZONE AQUATICS
+                                </Box>
+                            </Typography>
+
                         </Typography>
 
                         <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
