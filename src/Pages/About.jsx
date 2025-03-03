@@ -104,7 +104,7 @@ export default function About() {
                             <CardMedia
                                 component="img"
                                 sx={{ width: 300, height: 300, objectFit: 'cover', borderRadius: '8px' }}
-                                image="/src/assets/images/instructorImages/Ethan.jpg"
+                                image="https://s3.us-east-1.amazonaws.com/splashzoneaquatics.com/splash-zone-images/instructor-images/Ethan.jpg"
                                 alt="Ethan"
                             />
                             <Box
@@ -174,13 +174,13 @@ export default function About() {
                     <NavigationDiv
                         to="/faq"
                         label={"Any Questions?"}
-                        img="/src/assets/images/father-son.webp"
+                        img="https://s3.us-east-1.amazonaws.com/splashzoneaquatics.com/splash-zone-images/navigation-div-images/father-son.webp"
                     // onClick={onContactClick} // Pass the function here
                     />
                     <NavigationDiv
                         // to="/contact"
                         label={"Contact Us!"}
-                        img="/src/assets/images/kid-mother.avif"
+                        img="https://s3.us-east-1.amazonaws.com/splashzoneaquatics.com/splash-zone-images/navigation-div-images/kid-mother.avif"
                         onClick={onContactClick} // Pass the function here
                     />
                 </div>
