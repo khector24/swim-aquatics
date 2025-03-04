@@ -131,39 +131,67 @@
     align-items: center;
 }
 
-.content {
+.main-content .content {
     margin-left: auto;
     /* Pushes the content to the right */
     padding-right: 50px;
     /* Adds some spacing from the right edge */
-    max-width: 800px;
-    /* Optional: sets a max width for the content */
+    max-width: 500px;
+    height: 70vh;
     text-align: right;
+    color: #fff;
+
+    display: flex;
+    /* Enables flexbox */
+    flex-direction: column;
+    /* Stacks children vertically */
+    justify-content: space-between;
 }
 
-.content h1 {
+.main-content .content h1 {
     font-size: 5.5rem;
-    color: white;
+    color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
     padding-right: 0;
+    font-size: 5rem;
 }
 
-.content p {
-    color: #FFD94F;
+.main-content .content h1 .zone-highlight {
+    color: #4F75FF;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.main-content .content p {
+    color: #000;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.9);
     font-size: 2rem;
     margin-bottom: 25px;
+    padding: 20px;
 }
 
-.content button {
-    background-color: #4F75FF;
+.main-content .content .button-container {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    margin-top: auto;
 }
 
-.content button:hover {
-    background-color: #FFD94F;
+.main-content .content .button-container button {
+    /* background-color: #4F75FF;
+    color: #fff; */
+    background-color: #f0f8ff;
     color: #4F75FF;
+    border: 0.5px solid #000;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* .content .description {
-    background-color: transparent;
-} */
+.main-content .content .button-container button:hover {
+    /* background-color: #f0f8ff;
+    color: #4F75FF; */
+    background-color: #4F75FF;
+    color: #fff;
+    transform: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    /* Changes shadow on hover */
+
+}
