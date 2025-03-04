@@ -50,6 +50,21 @@
     /* Centers the icon */
 }
 
+.programs .package-container {
+    margin: 4rem 40px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.programs .package-card {
+    background-color: white;
+    color: #4F75FF;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .programs .contact-button {
     margin-top: 40px;
     background-color: #fff;

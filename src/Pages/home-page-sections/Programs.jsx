@@ -25,6 +25,28 @@ const programsData = [
     }
 ];
 
+const packageData = [
+    {
+        title: "Package 1",
+        totalSessions: "1 session",
+        times: [
+            "30 min / $45",
+            "45 min / $50",
+            "60 min / $65"
+        ]
+    },
+    {
+        title: "Package 2",
+        totalSessions: "5 sessions",
+        times: [
+            "30 min / $40 (Total: $200 for 5 sessions)",
+            "45 min / $45 (Total: $225 for 5 sessions)",
+            "60 min / $60 (Total: $300 for 5 sessions)"
+        ]
+    }
+];
+
+
 export default function Programs() {
     const { onContactClick } = useOutletContext();
 
@@ -46,6 +68,20 @@ export default function Programs() {
                             {program.description}
                         </Typography>
                         <img src={program.icon} alt={program.title} className="program-icon" />
+                    </Box>
+                ))}
+            </Box>
+            <Box className="package-container">
+                {packageData.map((pkg, index) => (
+                    <Box key={index} className="package-card">
+                        <Typography>{pkg.title}</Typography>
+                        <hr />
+                        <Typography>Total Sessions: {pkg.totalSessions}</Typography>
+                        <ul>
+                            {pkg.times.map((time, i) => (
+                                <p key={i}>{time}</p>
+                            ))}
+                        </ul>
                     </Box>
                 ))}
             </Box>
