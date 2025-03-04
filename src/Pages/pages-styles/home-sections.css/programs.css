@@ -50,14 +50,26 @@
     /* Centers the icon */
 }
 
+.toggle-packages-container {
+    background-color: #f0f8ff;
+    margin-top: 2rem;
+    padding: 2rem;
+}
+
+.toggle-packages-button {
+    margin-top: 2rem;
+    background-color: #f0f8ff;
+    color: #4F75FF;
+}
+
 .programs .package-container {
-    margin: 4rem 40px 0;
+    margin: 2rem 40px 0;
     display: flex;
     justify-content: space-evenly;
 }
 
 .programs .package-card {
-    background-color: white;
+    background-color: #f0f8ff;
     color: #4F75FF;
     padding: 20px;
     border-radius: 8px;
@@ -65,18 +77,34 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.programs .contact-button {
-    margin-top: 40px;
-    background-color: #fff;
-    color: #000;
-    transition: transform 0.3s ease, color 0.3s ease;
+.programs .programs-btns-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1rem;
+    padding: 1rem;
 }
 
-.programs .contact-button:hover {
-    margin-top: 40px;
+.programs .programs-btns-container button {
+    margin: 1rem 0 0;
+    background-color: #fff;
+    color: #000;
+    min-width: 200px;
+}
+
+.programs .programs-btns button:hover {
     background-color: #f0f8ff;
     color: #4F75FF;
+    transform: none;
+    /* transform: transform 0.3s ease, color 0.3s ease; */
 }
+
+.programs .contact-button {
+    /* 
+    transition: transform 0.3s ease, color 0.3s ease; */
+}
+
+.programs .contact-button:hover {}
 
 /* .programs {
     background-color: #4F75FF;

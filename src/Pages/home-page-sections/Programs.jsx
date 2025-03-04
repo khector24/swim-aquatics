@@ -3,6 +3,7 @@ import { Box, Typography } from '@mui/material';
 import CustomButton from '../../Components/CustomButton';
 import "../pages-styles/home-sections.css/programs.css";
 import { useOutletContext } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 const programsData = [
     {
@@ -50,6 +51,12 @@ const packageData = [
 export default function Programs() {
     const { onContactClick } = useOutletContext();
 
+    const [showPackages, setShowPackages] = useState(false);
+
+    const handleShowPackages = () => {
+        setShowPackages(!showPackages);
+    };
+
     return (
         <Box id="programs-section" className="programs">
             <Typography className="title" variant="h2" component="h2" gutterBottom>
@@ -71,21 +78,55 @@ export default function Programs() {
                     </Box>
                 ))}
             </Box>
-            <Box className="package-container">
-                {packageData.map((pkg, index) => (
-                    <Box key={index} className="package-card">
-                        <Typography>{pkg.title}</Typography>
-                        <hr />
-                        <Typography>Total Sessions: {pkg.totalSessions}</Typography>
-                        <ul>
-                            {pkg.times.map((time, i) => (
-                                <p key={i}>{time}</p>
+
+            {/* <div className='toggle-packages-container'>
+                {showPackages && (
+                    <Box className='toggle-packages'>
+                        <Box className="package-container">
+                            {packageData.map((pkg, index) => (
+                                <Box key={index} className="package-card">
+                                    <Typography>{pkg.title}</Typography>
+                                    <hr />
+                                    <Typography>Total Sessions: {pkg.totalSessions}</Typography>
+                                    <ul>
+                                        {pkg.times.map((time, i) => (
+                                            <p key={i}>{time}</p>
+                                        ))}
+                                    </ul>
+                                </Box>
                             ))}
-                        </ul>
+                        </Box>
                     </Box>
-                ))}
-            </Box>
-            <CustomButton onClick={onContactClick} label="Contact Us" className="contact-button" />
+                )}
+            </div> */}
+
+
+            {showPackages && (
+                <Box className='toggle-packages'>
+                    <Box className="package-container">
+                        {packageData.map((pkg, index) => (
+                            <Box key={index} className="package-card">
+                                <Typography>{pkg.title}</Typography>
+                                <hr />
+                                <Typography>Total Sessions: {pkg.totalSessions}</Typography>
+                                <ul>
+                                    {pkg.times.map((time, i) => (
+                                        <p key={i}>{time}</p>
+                                    ))}
+                                </ul>
+                            </Box>
+                        ))}
+                    </Box>
+                </Box>
+            )}
+
+
+            <div className='programs-btns-container'>
+                <button className='toggle-packages-button' onClick={handleShowPackages}>
+                    {!showPackages ? "Show Packages" : "Hide Packages"}
+                </button>
+                <CustomButton onClick={onContactClick} label="Contact Us" className="contact-button" />
+            </div>
         </Box>
     );
 }
