@@ -195,3 +195,18 @@
     /* Changes shadow on hover */
 
 }
+
+@media only screen and (max-width: 600px) {
+
+    .main-content .content h1,
+    p {
+        text-align: center;
+    }
+
+    .main-content .content .button-container {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: auto;
+    }
+}

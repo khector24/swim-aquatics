@@ -152,6 +152,49 @@ function NavBar({ onContactClick, onNewsletterClick }) {
                             SPLASH-ZONE
                         </Typography>
 
+                        <Menu
+                            id="menu-appbar"
+                            anchorEl={anchorElNav}
+                            anchorOrigin={{
+                                vertical: 'bottom',
+                                horizontal: 'left',
+                            }}
+                            keepMounted
+                            transformOrigin={{
+                                vertical: 'top',
+                                horizontal: 'left',
+                            }}
+                            open={Boolean(anchorElNav)}
+                            onClose={handleCloseNavMenu}
+                            sx={{ display: { xs: 'block', md: 'none' } }}
+                        >
+                            {pages.map((page) => (
+                                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                                    <Typography sx={{ textAlign: 'center' }}>
+                                        <NavLink
+                                            to={page.path}
+                                            style={({ isActive }) => ({
+                                                textDecoration: 'none',
+                                                color: 'inherit',
+                                                borderBottom: isActive ? '5px solid black' : 'none',
+                                            })}
+                                        >
+                                            {page.name}
+                                        </NavLink>
+                                    </Typography>
+                                </MenuItem>
+                            ))}
+
+                            {/* Add Contact Us and Newsletter inside the dropdown */}
+                            <MenuItem onClick={() => { handleCloseNavMenu(); onContactClick(); }}>
+                                <Typography textAlign="center">Contact Us</Typography>
+                            </MenuItem>
+                            <MenuItem onClick={() => { handleCloseNavMenu(); onNewsletterClick(); }}>
+                                <Typography textAlign="center">Newsletter</Typography>
+                            </MenuItem>
+                        </Menu>
+
+
                         <Box sx={{ display: { xs: 'none', md: 'flex' }, ml: 'auto' }}>
                             {pages.map((page) => (
                                 <Button

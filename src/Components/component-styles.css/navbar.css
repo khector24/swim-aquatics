@@ -1,12 +1,8 @@
 .wave-icon {
     height: 1.5em;
-    /* Adjust size to match text */
     width: auto;
-    /* Maintain aspect ratio */
     vertical-align: middle;
-    /* Align with text */
     margin-right: 8px;
-    /* Add spacing between icon and text */
 }
 
 
@@ -14,4 +10,8 @@
     background-color: #dfe8ff !important;
     border-radius: 5px;
     transform: none !important;
+}
+
+.css-20bmp1-MuiSvgIcon-root {
+    color: #4F75FF;
 }
