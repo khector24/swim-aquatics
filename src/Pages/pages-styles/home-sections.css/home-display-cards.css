@@ -27,3 +27,39 @@
 .MuiCardActionArea-root:hover {
     transform: none !important;
 }
+
+@media only screen and (max-width: 600px) {
+    .section-container {
+        flex-direction: row;
+        /* Stack items vertically */
+        align-items: center;
+        padding: 20px;
+    }
+
+    .section-container .home-card {
+        width: 100%;
+        /* Adjust width for better visibility */
+        display: flex;
+        justify-content: space-between;
+        margin: 0 .2rem;
+    }
+
+    .section-container .home-card p,
+    .section-container .home-card .MuiTypography-root {
+        font-size: .75rem !important;
+        /* Reduce text size */
+        text-align: center;
+    }
+}
+
+
+/* @media only screen and (max-width: 600px) {
+    .section-container .home-card {
+        display: flex;
+        align-items: center;
+    }
+
+    .section-container .home-card p {
+        font-size: 5px;
+    }
+} */
