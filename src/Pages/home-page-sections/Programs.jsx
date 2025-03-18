@@ -31,9 +31,9 @@ const packageData = [
         title: "Package 1",
         totalSessions: "1 session",
         times: [
-            "30 min / $45",
-            "45 min / $50",
-            "60 min / $65"
+            "30 min / $45 per session",
+            "45 min / $50 per session",
+            "60 min / $65 per session"
         ]
     },
     {
@@ -108,10 +108,10 @@ export default function Programs() {
                             <Box key={index} className="package-card">
                                 <Typography>{pkg.title}</Typography>
                                 <hr />
-                                <Typography>Total Sessions: {pkg.totalSessions}</Typography>
+                                <Typography className='pkg-sessions'>Total Sessions: {pkg.totalSessions}</Typography>
                                 <ul>
                                     {pkg.times.map((time, i) => (
-                                        <p key={i}>{time}</p>
+                                        <p className='pkg-times' key={i}>{time}</p>
                                     ))}
                                 </ul>
                             </Box>

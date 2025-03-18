@@ -63,9 +63,10 @@
 }
 
 .programs .package-container {
-    margin: 2rem 40px 0;
+    margin: 5rem 40px 0;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 15px;
 }
 
 .programs .package-card {
@@ -75,6 +76,18 @@
     border-radius: 8px;
     width: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.programs .package-card .pkg-sessions {
+    background-color: #f0f8ff;
+}
+
+.programs .package-card .pkg-times {
+    background-color: #4F75FF;
+    color: #fff;
+    margin-top: 10px;
+    padding: 4px;
+    border-radius: 3px;
 }
 
 .programs .programs-btns-container {
