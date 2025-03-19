@@ -112,52 +112,14 @@
     /* transform: transform 0.3s ease, color 0.3s ease; */
 }
 
-.programs .contact-button {
-    /* 
-    transition: transform 0.3s ease, color 0.3s ease; */
-}
+.programs .contact-button {}
 
 .programs .contact-button:hover {}
 
-/* .programs {
-    background-color: #4F75FF;
-    padding: 20px;
-}
--+
-+
-.programs h2 {
-    font-size: 2rem;
-    color: white;
-}
 
-.programs p {
-    font-size: 1rem;
-    color: white;
+@media screen and (max-width: 768px) {
+    .programs .package-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
-
-.programs .program-card {
-    flex: 1 1 30%;
-    box-sizing: border-box;
-    padding: 10px;
-}
-
-.programs .program-card h4 {
-    font-size: 1.25rem;
-    color: white;
-}
-
-.programs .program-card p {
-    font-size: 1rem;
-    color: white;
-}---
-
-.programs .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-}
-
-.programs .contact-button {
-    margin-top: 16px;
-    background-color: #FFD94F;
-} */

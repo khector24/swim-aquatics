@@ -13,8 +13,11 @@ export default function Main() {
         <section className="main-content" style={{ backgroundImage: `url(${backgroundImage})` }}>
             <div className="content">
                 <h1>
-                    SPLASH-<span className="zone-highlight">ZONE</span> AQUATICS
+                    <span className="splash-zone">SPLASH-<span className="zone-highlight">ZONE</span></span>
+                    <br />
+                    AQUATICS
                 </h1>
+
                 <p className="content-description">
                     Let your child dive into the world of swimming
                     and discover a lifetime of joy

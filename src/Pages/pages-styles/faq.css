@@ -17,8 +17,13 @@
     margin-top: 20px;
 }
 
-.heading-description .question button {
+.heading-description button {
     margin-top: 10px;
+}
+
+.heading-description button:hover {
+    transform: none;
+    background-color: #fff;
 }
 
 .accordion {
@@ -37,4 +42,36 @@ hr {
     border: none;
     border-top: 2px dashed #333;
     margin: 20px 0;
+}
+
+@media only screen and (max-width: 900px) {
+
+    .FAQ-Heading h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .heading-description {
+        text-align: center;
+    }
+
+    .heading-description button {
+        display: block;
+        margin: 10px auto 0;
+    }
+
+    .css-1xkv504-MuiTypography-root {
+        text-align: left;
+    }
+
+    .css-1edfpdg-MuiTypography-root {
+        text-align: left;
+    }
 }

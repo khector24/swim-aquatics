@@ -44,9 +44,8 @@ export default function FAQ() {
                     <hr />
                     <Typography className="question" variant="body1" component="p" gutterBottom>
                         Have a more specific question?
-                        <br />
-                        <CustomButton onClick={onContactClick} label={"Contact Us!"} />
                     </Typography>
+                    <CustomButton onClick={onContactClick} label={"Contact Us!"} />
                 </div>
 
             </div>
