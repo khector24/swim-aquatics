@@ -3,11 +3,32 @@
 }
 
 .container-modal {
-    min-width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
+    width: 90%;
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+
+.container {
     margin: 0;
+}
+
+.container p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: left;
 }
 
 .container h1 {
@@ -53,4 +74,23 @@ h4 {
 
 .social-icon:hover {
     color: #dfe8ff;
+}
+
+@media screen and (max-width: 600px) {
+
+    .container p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        text-align: center;
+    }
+
+    .contact-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

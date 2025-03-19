@@ -39,7 +39,7 @@ function ContactUsModal({ open, handleClose }) {
                     Monday - Friday: 9:00 AM - 5:00 PM<br />
                     Saturday - Sunday: Closed
                 </Typography>
-                <Box sx={{ pb: 1 }}>
+                <Box className="contact-section" sx={{ pb: 1 }}>
                     <Typography variant="h5" component="h4" gutterBottom sx={{ mt: 0, pb: 0 }}>Our Contact Information</Typography>
                     <Typography variant="body1" gutterBottom><strong>Phone:</strong> (845) 825-7038</Typography>
                     <Typography variant="body1" gutterBottom><strong>Email:</strong> {email}</Typography>
