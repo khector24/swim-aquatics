@@ -43,6 +43,7 @@ export default function HomeDisplayCards() {
                             />
                         </CardActionArea>
                         <Box
+                            className="label-box"
                             sx={{
                                 position: 'absolute',
                                 bottom: 10,
