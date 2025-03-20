@@ -37,13 +37,13 @@ export default function Testimonials() {
 
     return (
         <div className="reviews">
-            <Box sx={{ margin: '5rem 0' }}>
+            <Box sx={{ margin: '2rem 0' }}>
                 <Typography
                     variant="h4"
                     sx={{
                         textAlign: 'center',
                         mb: 4,
-                        mt: 15,
+                        mt: 5,
                         color: "#4F75FF"
                     }}>
                     Notable Reviews
@@ -65,12 +65,12 @@ export default function Testimonials() {
                                 padding: '1rem',
                                 backgroundColor: "#4F75FF"
                             }}>
-                            <CardContent>
+                            <CardContent className='star-review'>
                                 <Typography sx={{ color: 'white' }} variant="h6" gutterBottom>{review.title}</Typography>
                                 <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
                                     {review.content}
                                 </Typography>
-                                <ReviewRating value={review.rating} />
+                                <ReviewRating className='star' value={review.rating} />
                                 <p className="author">- {review.author}</p>
                             </CardContent>
                         </Card>

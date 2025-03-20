@@ -72,15 +72,21 @@ h2 {
     gap: 16px;
 }
 
-.card-description {
-    padding: none;
+.leader-section .leader-card .leader-card-name {
+    margin-bottom: 1rem;
+}
+
+.leader-card-description {
+    padding: 0 1rem 0 0;
 }
 
 .offers {
     margin-bottom: 35px;
 }
 
-.students {}
+.students {
+    margin-top: 3rem;
+}
 
 .offers,
 .students {
@@ -102,6 +108,83 @@ h2 {
     /* Add hover effect */
 }
 
+
+.card-title-description {
+    flex: '1 0 auto'
+}
+
+@media screen and (max-width: 1170px) {
+    .leader-section .leader-card .leader-card-name {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 1106px) {
+    .leader-section .leader-card {
+        padding-left: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 1082px) {
+    .leader-section .leader-card .leader-card-description {
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    /* .leader-section .leader-card img {
+        width: 275px;
+        height: 275px;
+    } */
+
+    .leader-section .leader-card {
+        /* padding-top: 1rem; */
+        /* padding-bottom: 1rem; */
+        padding: 1rem 0.5rem 1rem 1.25rem;
+    }
+
+    .leader-section .leader-card .leader-card-name {
+        margin-bottom: .5rem;
+    }
+
+    .leader-section .leader-card .leader-card-description {
+        line-height: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 1030px) {
+
+    .leader-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .leader-section h2 {
+        text-align: center;
+    }
+
+    .leader-section .leader-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .leader-section .leader-card img {
+        margin-top: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .side-navigation {
+        display: none;
+    }
+
+    .about-us .content {
+        border-right: none;
+    }
+}
+
 @media (max-width: 768px) {
     .about-us {
         margin: 80px 25px 20px;
@@ -114,6 +197,71 @@ h2 {
     .offers,
     .students {
         max-width: 100%;
-        margin: 0;
+        margin: 2rem 0 0 0;
+    }
+
+    .about-us {
+        flex-direction: column;
+        align-items: center;
+        margin: 40px 20px;
+    }
+
+    .content {
+        border-right: none;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .content .title h1 {
+        text-align: center;
+    }
+
+    .content .title p {
+        text-align: center;
+    }
+
+    .leader-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .leader-section h2 {
+        text-align: center;
+    }
+
+    .leader-section .leader-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .leader-section .leader-card img {
+        margin-top: 1.5rem;
+    }
+
+    .side-navigation {
+        display: none;
+    }
+
+    .offers,
+    .students {
+        text-align: center;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .philosophy {
+        padding: 15px;
+    }
+
+    .philosophy h2 {
+        text-align: center;
+    }
+
+    .philosophy p {
+        text-align: center;
     }
 }

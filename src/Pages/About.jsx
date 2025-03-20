@@ -115,7 +115,8 @@ export default function About() {
                                 }}
                             >
                                 <CardContent
-                                    sx={{ flex: '1 0 auto' }}
+                                    className="card-title-description"
+                                    sx={{}}
                                 >
                                     <Typography
                                         className='leader-card-name'
