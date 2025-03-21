@@ -28,7 +28,12 @@
     transform: none !important;
 }
 
-@media only screen and (max-width: 780px) {
+.section-container .home-card p,
+.section-container .home-card .MuiTypography-root {
+    font-size: 1.75rem !important;
+}
+
+@media only screen and (max-width: 1200px) {
     .section-container .home-card .label-box {
         position: absolute;
         bottom: 10px;
@@ -40,8 +45,24 @@
 
     .section-container .home-card p,
     .section-container .home-card .MuiTypography-root {
-        font-size: 1rem !important;
+        font-size: 1.5rem !important;
         text-align: center !important;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+    .section-container .home-card p,
+    .section-container .home-card .MuiTypography-root {
+        font-size: 1.25rem !important;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+
+    .section-container .home-card p,
+    .section-container .home-card .MuiTypography-root {
+        font-size: 1rem !important;
     }
 }
 
