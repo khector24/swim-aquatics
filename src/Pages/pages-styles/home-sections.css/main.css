@@ -30,6 +30,7 @@
 .main-content .content h1 {
     font-size: 5.5rem;
     color: #fff;
+    text-align: right;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
     padding-right: 0;
     font-size: 5rem;
@@ -95,11 +96,16 @@
         height: 30vh;
     }
 
-    .main-content .content h1 .splash-zone {
+    .main-content .content h1 {
+        color: #4F75FF;
+        text-align: center;
+    }
+
+    .main-content .content h1 .splash-zone,
+    .main-content .content h1 .zone-highlight {
         display: inline-block;
         white-space: nowrap;
-        /* Prevents wrapping */
-        color: #4F75FF;
+        color: #FFF;
     }
 
 
@@ -108,6 +114,18 @@
     }
 }
 
+@media screen and (min-width: 601px) and (max-width: 780px) {
+    .main-content .content h1 {
+        color: #4F75FF;
+        text-align: center;
+    }
+
+    .main-content .content h1 .zone-highlight {
+        display: inline-block;
+        white-space: nowrap;
+        color: #FFF;
+    }
+}
 
 @media only screen and (max-width: 600px) {
 
@@ -120,9 +138,20 @@
         text-align: center;
     }
 
+    .main-content .content h1 {
+        color: #FFF;
+        text-align: center;
+    }
+
     .main-content .content h1 .splash-zone {
         white-space: normal;
         color: #FFF;
+    }
+
+    .main-content .content h1 .zone-highlight {
+        display: inline-block;
+        white-space: nowrap;
+        color: #4F75FF;
     }
 
     .main-content .content .button-container {
