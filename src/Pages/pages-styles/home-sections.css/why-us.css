@@ -3,8 +3,13 @@
     padding: 70px 40px 40px;
 }
 
-.why-us-container .heading {
+.why-us-container .heading h3,
+h2,
+.why-us-container .title,
+.css-uniq8u-MuiTypography-rooth3,
+h2 {
     color: #4F75FF;
+    text-align: center;
 }
 
 .description {
@@ -33,6 +38,11 @@
     min-width: 250px;
 }
 
+h6,
+.css-uyrjoy-MuiTypography-root {
+    text-align: center;
+}
+
 button {
     background-color: #4F75FF;
     border-radius: 10px;
@@ -46,8 +56,10 @@ button {
 
 button:hover {
     transform: scale(1.05);
-    background-color: #FFD94F;
+    background-color: #c4e0f9;
     color: #4F75FF;
+    transform: none;
+    cursor: pointer;
 }
 
 /* Media Query for smaller screens */
