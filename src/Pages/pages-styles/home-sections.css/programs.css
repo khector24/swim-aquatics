@@ -7,6 +7,7 @@
 
 .programs .title {
     color: #FFF;
+    text-align: center;
 }
 
 .programs .title-description {
@@ -112,9 +113,16 @@
     /* transform: transform 0.3s ease, color 0.3s ease; */
 }
 
+.programs .programs-btns-container .toggle-packages-button:hover {
+    background-color: #c4e0f9;
+}
+
 .programs .contact-button {}
 
-.programs .contact-button:hover {}
+.programs .contact-button:hover {
+    transform: none;
+    background-color: #c4e0f9;
+}
 
 
 @media screen and (max-width: 768px) {
