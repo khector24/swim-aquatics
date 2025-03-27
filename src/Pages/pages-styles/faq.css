@@ -6,6 +6,10 @@
     margin-bottom: 40px;
 }
 
+.FAQ-Heading h4 {
+    text-align: left;
+}
+
 .heading-description {
     margin-bottom: 50px;
     padding: 20px;
@@ -52,6 +56,10 @@ hr {
     h4,
     h5,
     h6 {
+        text-align: center;
+    }
+
+    .FAQ-Heading h4 {
         text-align: center;
     }
 
