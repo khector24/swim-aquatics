@@ -15,3 +15,81 @@
 .css-20bmp1-MuiSvgIcon-root {
     color: #4F75FF;
 }
+
+.css-1xomo8h-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+    width: 100%;
+    min-width: 200px;
+    /* Adjust width */
+    border-radius: 8px;
+    /* Softer corners */
+    background-color: #f0f8ff;
+    /* Light blue background */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    /* Soft shadow */
+    text-align: center;
+    /* Center items */
+}
+
+.css-1xomo8h-MuiPaper-root-MuiPopover-paper-MuiMenu-paper ul {
+    width: 100%;
+    padding: 0;
+}
+
+.css-1xomo8h-MuiPaper-root-MuiPopover-paper-MuiMenu-paper ul li {
+    border-top: 2px solid #4F75FF;
+    /* text-align: center; */
+}
+
+.css-1xomo8h-MuiPaper-root-MuiPopover-paper-MuiMenu-paper .MuiMenuItem-root {
+    font-size: 1rem;
+    /* Increase text size */
+    font-weight: bold;
+    padding: 10px 20px;
+    /* Adjust spacing */
+    color: #4F75FF;
+    /* Match brand color */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.css-1xomo8h-MuiPaper-root-MuiPopover-paper-MuiMenu-paper .MuiMenuItem-root:hover {
+    background-color: #dfe8ff;
+    /* Hover effect */
+    /* border-radius: 5px; */
+}
+
+.css-20bmp1-MuiSvgIcon-root {
+    font-size: 2rem;
+    /* Make icon bigger */
+    color: #4F75FF;
+    /* Keep the brand color */
+    transition: transform 0.2s ease-in-out;
+}
+
+.css-20bmp1-MuiSvgIcon-root:hover {
+    transform: scale(1.1);
+    /* Slight pop effect */
+}
+
+.css-1xomo8h-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 900px) {
+    .css-1xomo8h-MuiPaper-root-MuiPopover-paper-MuiMenu-paper ul li:hover {
+        background-color: #dfe8ff;
+        /* Same hover effect */
+        border-radius: 5px;
+    }
+}

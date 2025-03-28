@@ -122,7 +122,7 @@ function NavBar({ onContactClick, onNewsletterClick }) {
                                                 style={({ isActive }) => ({
                                                     textDecoration: 'none',
                                                     color: 'inherit',
-                                                    borderBottom: isActive ? '5px solid black' : 'none',
+                                                    borderBottom: isActive && window.innerWidth > 900 ? '5px solid black' : 'none',
                                                 })}
                                             >
                                                 {page.name}
@@ -176,7 +176,7 @@ function NavBar({ onContactClick, onNewsletterClick }) {
                                             style={({ isActive }) => ({
                                                 textDecoration: 'none',
                                                 color: 'inherit',
-                                                borderBottom: isActive ? '5px solid black' : 'none',
+                                                borderBottom: isActive && window.innerWidth > 900 ? '5px solid black' : 'none',
                                             })}
                                         >
                                             {page.name}
