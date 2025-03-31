@@ -12,6 +12,7 @@ import MenuItem from '@mui/material/MenuItem';
 import { NavLink } from "react-router-dom";
 import ContactUsModal from '../Pages/ContactUsModal';
 import './component-styles.css/navbar.css';
+import "./component-styles.css/navbar.css";
 
 const pages = [
     { name: 'Home', path: '/' },
@@ -94,10 +95,11 @@ function NavBar({ onContactClick, onNewsletterClick }) {
                                 aria-controls="menu-appbar"
                                 aria-haspopup="true"
                                 onClick={handleOpenNavMenu}
-                                color="inherit"
+                                className="menu-icon-button"
                             >
-                                <MenuIcon />
+                                <MenuIcon className="menu-icon" />
                             </IconButton>
+
                             <Menu
                                 id="menu-appbar"
                                 anchorEl={anchorElNav}
@@ -113,9 +115,12 @@ function NavBar({ onContactClick, onNewsletterClick }) {
                                 open={Boolean(anchorElNav)}
                                 onClose={handleCloseNavMenu}
                                 sx={{ display: { xs: 'block', md: 'none' } }}
+                                PaperProps={{
+                                    className: "dropdown-menu", // This ensures the class is applied to the correct div
+                                }}
                             >
                                 {pages.map((page) => (
-                                    <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                                    <MenuItem key={page.name} onClick={handleCloseNavMenu} className="dropdown-item">
                                         <Typography sx={{ textAlign: 'center' }}>
                                             <NavLink
                                                 to={page.path}
@@ -167,9 +172,12 @@ function NavBar({ onContactClick, onNewsletterClick }) {
                             open={Boolean(anchorElNav)}
                             onClose={handleCloseNavMenu}
                             sx={{ display: { xs: 'block', md: 'none' } }}
+                            PaperProps={{
+                                className: "dropdown-menu", // This ensures the class is applied to the correct div
+                            }}
                         >
                             {pages.map((page) => (
-                                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                                <MenuItem key={page.name} onClick={handleCloseNavMenu} className="dropdown-item">
                                     <Typography sx={{ textAlign: 'center' }}>
                                         <NavLink
                                             to={page.path}

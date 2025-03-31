@@ -12,22 +12,17 @@
     transform: none !important;
 }
 
-.css-20bmp1-MuiSvgIcon-root {
+/* .css-20bmp1-MuiSvgIcon-root {
     color: #4F75FF;
 }
 
 .css-1xomo8h-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
     width: 100%;
     min-width: 200px;
-    /* Adjust width */
     border-radius: 8px;
-    /* Softer corners */
     background-color: #f0f8ff;
-    /* Light blue background */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    /* Soft shadow */
     text-align: center;
-    /* Center items */
 }
 
 .css-1xomo8h-MuiPaper-root-MuiPopover-paper-MuiMenu-paper ul {
@@ -37,40 +32,31 @@
 
 .css-1xomo8h-MuiPaper-root-MuiPopover-paper-MuiMenu-paper ul li {
     border-top: 2px solid #4F75FF;
-    /* text-align: center; */
 }
 
 .css-1xomo8h-MuiPaper-root-MuiPopover-paper-MuiMenu-paper .MuiMenuItem-root {
     font-size: 1rem;
-    /* Increase text size */
     font-weight: bold;
     padding: 10px 20px;
-    /* Adjust spacing */
     color: #4F75FF;
-    /* Match brand color */
     transition: background-color 0.3s ease-in-out;
 }
 
 .css-1xomo8h-MuiPaper-root-MuiPopover-paper-MuiMenu-paper .MuiMenuItem-root:hover {
     background-color: #dfe8ff;
-    /* Hover effect */
-    /* border-radius: 5px; */
 }
 
 .css-20bmp1-MuiSvgIcon-root {
     font-size: 2rem;
-    /* Make icon bigger */
     color: #4F75FF;
-    /* Keep the brand color */
     transition: transform 0.2s ease-in-out;
 }
 
 .css-20bmp1-MuiSvgIcon-root:hover {
     transform: scale(1.1);
-    /* Slight pop effect */
-}
+} */
 
-.css-1xomo8h-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+/* .css-1xomo8h-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
     animation: fadeIn 0.3s ease-in-out;
 }
 
@@ -84,12 +70,54 @@
         opacity: 1;
         transform: translateY(0);
     }
-}
+} */
 
 @media (max-width: 900px) {
-    .css-1xomo8h-MuiPaper-root-MuiPopover-paper-MuiMenu-paper ul li:hover {
-        background-color: #dfe8ff;
-        /* Same hover effect */
-        border-radius: 5px;
+    .menu-icon {
+        color: #4F75FF !important;
     }
+
+    .menu-icon-button {
+        color: #4F75FF !important;
+    }
+
+    /* Make the dropdown menu take full width */
+    .dropdown-menu {
+        width: 100% !important;
+
+    }
+
+    .dropdown-menu ul {
+        width: 100% !important;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .dropdown-menu ul li {
+        /* border: 2px solid #4F75FF; */
+        color: #4F75FF;
+    }
+
+    .dropdown-menu ul li:not(:first-child) {
+        border-top: 2px solid #4F75FF;
+        /* Add border at the top for all but the first item */
+    }
+
+    /* Style the dropdown items */
+    .dropdown-item {
+        /* width: 100%;
+        text-align: center;
+        background-color: #f0f8ff;
+        color: #4F75FF; */
+        /* Match navbar background */
+    }
+
+    /* Style the links inside dropdown */
+    /* .dropdown-link {
+        text-decoration: none;
+        color: #4F75FF;
+        font-weight: bold;
+        display: block;
+        padding: 10px 0;
+    } */
 }
