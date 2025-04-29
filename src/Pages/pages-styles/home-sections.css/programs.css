@@ -61,6 +61,11 @@
     margin-top: 2rem;
     background-color: #f0f8ff;
     color: #4F75FF;
+    border: 2px solid black;
+}
+
+.contact-button {
+    border: 2px solid black;
 }
 
 .programs .package-container {

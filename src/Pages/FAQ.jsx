@@ -61,12 +61,12 @@ export default function FAQ() {
                             aria-controls={`panel${index}-content`}
                             id={`panel${index}-header`}
                         >
-                            <Typography sx={{ color: 'white' }}>
+                            <Typography className='accordion-question' sx={{ color: 'white' }}>
                                 Question {index + 1}: {faq.question}
                             </Typography>
                         </AccordionSummary>
                         <AccordionDetails>
-                            <Typography>
+                            <Typography className='accordion-answer'>
                                 {faq.answer}
                             </Typography>
                         </AccordionDetails>

@@ -46,10 +46,18 @@ function NewsletterModal({ open, handleClose }) {
                 top: '50%',
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
-                width: 400,
+                width: {
+                    xs: '85%',     // phones and very small screens
+                    sm: '80%',     // small tablets
+                    md: 400        // normal default (desktop and larger)
+                },
                 bgcolor: 'background.paper',
                 boxShadow: 24,
-                p: 4,
+                p: {
+                    xs: 2,        // smaller padding on phones
+                    sm: 3,
+                    md: 4
+                },
             }}>
                 <IconButton
                     sx={{ position: 'absolute', top: 8, right: 8 }}
@@ -57,7 +65,9 @@ function NewsletterModal({ open, handleClose }) {
                 >
                     <CloseIcon />
                 </IconButton>
-                <Typography variant="h6" component="h1">Subscribe to Our Newsletter</Typography>
+                <Typography sx={{ pt: "10px", pb: "10px" }} variant="h6" component="h1">
+                    Subscribe to Our Newsletter
+                </Typography>
                 <Typography variant="body1" sx={{ mt: 2 }}>
                     Stay updated with the latest news and offers from Splash Zone Aquatics.
                 </Typography>

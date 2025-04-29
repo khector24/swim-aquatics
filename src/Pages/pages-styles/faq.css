@@ -95,3 +95,20 @@ hr {
         text-align: left;
     }
 }
+
+
+@media only screen and (max-width: 480px) {
+
+    .FAQ-Heading h1,
+    h3 {
+        font-size: 2.75rem;
+    }
+
+    .accordion .accordion-question {
+        text-align: left;
+    }
+
+    .accordion .accordion-answer {
+        text-align: left;
+    }
+}
