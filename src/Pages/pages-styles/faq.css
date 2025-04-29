@@ -65,7 +65,19 @@ hr {
 
 }
 
+@media only screen and (max-width: 750px) {
+    .FAQ-Content {
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+    }
+}
+
 @media only screen and (max-width: 600px) {
+    .FAQ-Content {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
     .heading-description {
         text-align: center;
     }

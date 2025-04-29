@@ -197,3 +197,12 @@
         margin-bottom: 1.5rem;
     }
 }
+
+
+@media only screen and (max-width: 480px) {
+    .main-content .content h1 {
+        font-size: 3rem;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+    }
+}
