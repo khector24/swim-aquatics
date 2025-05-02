@@ -1,25 +1,28 @@
-import resend from 'resend';
+import { Resend } from 'resend';
 import AWS from 'aws-sdk';
 
 AWS.config.update({ region: 'us-east-1' }); // Update region if needed
 
 const ses = new AWS.SES();
-const SENDER_EMAIL = 'splashzoneaquatics@gmail.com';
-const businessContent = 'If you have any questions, please contact us at 845-659-6405.';
+// const SENDER_EMAIL = 'mail.splashzoneaquatics.com';
+const senderEmail = '"Splash Zone Aquatics" <noreply@splashzoneaquatics.com>'; // This is your verified sender email
+
+const businessContent = 'If you have any questions, please contact us at 845-825-7038.';
 const endPhrase = "- Team at Splash Zone Aquatics";
 
 // Initialize Resend client with API Key from environment variable
-const resendClient = new resend(process.env.RESEND_API_KEY);
+// const resendClient = new resend(process.env.RESEND_API_KEY);
+const resendClient = new Resend(process.env.RESEND_API_KEY); // Correct instantiation
 
 // Helper function to send a welcome email using Resend API
 const sendWelcomeEmail = async (firstName, lastName, email) => {
-    const customerContent = `Dear ${firstName} ${lastName},\n\nWelcome to Splash Zone Aquatics! We’re excited to have you onboard. Stay tuned for updates, special offers, and much more.`;
-    const unsubscribeLink = `\n\nTo unsubscribe, click here: https://splashzoneaquatics.com/unsubscribe?email=${encodeURIComponent(email)}`;
-    const emailContent = `${customerContent}${unsubscribeLink}\n\n${businessContent}\n\n${endPhrase}`;
+    const customerContent = `Dear ${firstName} ${lastName},<br><br> Welcome to Splash Zone Aquatics! We’re excited to have you onboard. Stay tuned for updates, special offers, and much more.`;
+    const unsubscribeLink = `<br><br> To unsubscribe, click here: https://splashzoneaquatics.com/unsubscribe?email=${encodeURIComponent(email)}`;
+    const emailContent = `${customerContent}${unsubscribeLink}<br><br>${businessContent}<br><br>${endPhrase}`;
 
     try {
         const response = await resendClient.emails.send({
-            from: 'splashzoneaquatics@gmail.com',
+            from: senderEmail,
             to: email,
             subject: 'Welcome to Splash Zone Aquatics!',
             html: `<p>${emailContent}</p>`
@@ -32,11 +35,11 @@ const sendWelcomeEmail = async (firstName, lastName, email) => {
 
 // Helper function to send an unsubscribe confirmation email using Resend API
 const sendUnsubscribeEmail = async (firstName, lastName, email) => {
-    const emailContent = `Dear ${firstName} ${lastName},\n\nWe're sorry to see you go. You have successfully unsubscribed from Splash Zone Aquatics. We hope to have you back soon!\n\n${endPhrase}`;
+    const emailContent = `Dear ${firstName} ${lastName},<br><br>You have successfully unsubscribed from Splash Zone Aquatics. <br><br>We're sorry to see you go. Feel free to join back to the newsletter at any point if you change your mind. We hope to have you back soon!<br><br>${endPhrase}`;
 
     try {
         const response = await resendClient.emails.send({
-            from: 'splashzoneaquatics@gmail.com',
+            from: senderEmail,
             to: email,
             subject: 'You have been unsubscribed from Splash Zone Aquatics',
             html: `<p>${emailContent}</p>`
@@ -90,3 +93,6 @@ export const handler = async (event) => {
         console.error('Error in Lambda handler:', error);
     }
 };
+
+
+// Best Resend Version 
