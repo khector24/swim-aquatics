@@ -38,6 +38,11 @@ h2 {
     min-width: 250px;
 }
 
+.card-container .why-us-card .heading,
+h6 {
+    text-align: center;
+}
+
 h6,
 .css-uyrjoy-MuiTypography-root {
     text-align: center;

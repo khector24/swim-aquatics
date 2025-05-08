@@ -94,6 +94,14 @@ hr {
     .css-1edfpdg-MuiTypography-root {
         text-align: left;
     }
+
+    .accordion .accordion-question {
+        text-align: left;
+    }
+
+    .accordion .accordion-answer {
+        text-align: left;
+    }
 }
 
 
